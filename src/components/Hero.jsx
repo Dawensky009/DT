@@ -4,7 +4,6 @@ import { ArrowDown } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
 import { useCountUp } from '../hooks/useCountUp.js'
-import SpotlightImage from './SpotlightImage.jsx'
 
 const rise = {
   hidden: { opacity: 0, y: 24 },
@@ -44,18 +43,19 @@ export default function Hero() {
 
   return (
     <section id="top" ref={heroRef} className="relative flex min-h-screen flex-col overflow-hidden bg-canvas">
-      {/* Desktop portrait — color-reveal on hover, parallax on scroll */}
+      {/* Desktop portrait — full color, parallax on scroll */}
       <motion.div
         style={{ y: portraitY }}
         className="absolute inset-y-0 right-0 z-0 hidden lg:block lg:w-[48%]"
       >
-        <SpotlightImage
+        <motion.img
           src={profile.photo}
           alt={t.hero.photoAlt}
-          radius={150}
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="h-full w-full object-cover object-top"
           loading="eager"
-          className="h-full w-full"
-          imgClassName="h-full w-full object-cover object-top"
         />
         <div
           className="pointer-events-none absolute inset-y-0 left-0 z-10 w-2/5 bg-gradient-to-r from-canvas via-canvas/60 to-transparent"
@@ -98,29 +98,24 @@ export default function Hero() {
           >
             {t.hero.hello}
           </motion.h1>
-          <motion.div
+          <motion.p
             variants={rise}
             initial="hidden"
             animate="show"
             custom={2}
-            className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
+            className="mt-4 text-base text-muted sm:text-lg"
           >
-            <p className="text-base text-muted sm:text-lg">{t.hero.subtitle}</p>
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-ink/15 px-3 py-1 text-xs font-medium text-ink">
-              <span className="h-1.5 w-1.5 rounded-full bg-ink" />
-              {t.hero.badge}
-            </span>
-          </motion.div>
+            {t.hero.subtitle}
+          </motion.p>
         </div>
 
-        {/* Mobile portrait — contained, in flow */}
-        <motion.div variants={rise} initial="hidden" animate="show" custom={3} className="mt-10 lg:hidden">
-          <SpotlightImage
+        {/* Mobile portrait — full color, in flow */}
+        <motion.div variants={rise} initial="hidden" animate="show" custom={3} className="mt-10 overflow-hidden rounded-2xl lg:hidden">
+          <img
             src={profile.photo}
             alt={t.hero.photoAlt}
+            className="aspect-[5/4] w-full object-cover object-top"
             loading="eager"
-            className="rounded-2xl"
-            imgClassName="aspect-[5/4] w-full object-cover object-top"
           />
         </motion.div>
 

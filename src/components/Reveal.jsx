@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 
-// Reusable scroll-reveal wrapper. Fades + slides children in once,
-// when they enter the viewport. Framer Motion respects reduced-motion
-// preferences automatically.
+// Reusable scroll-reveal wrapper. Fades + slides (and optionally blurs)
+// children in once, as they enter the viewport. Framer Motion respects
+// reduced-motion preferences automatically.
 export default function Reveal({
   children,
   delay = 0,
-  y = 24,
+  y = 34,
+  blur = true,
   className = '',
   as = 'div',
 }) {
@@ -14,10 +15,10 @@ export default function Reveal({
   return (
     <MotionTag
       className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0, y, filter: blur ? 'blur(6px)' : 'blur(0px)' }}
+      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.75, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </MotionTag>

@@ -8,7 +8,7 @@ export const profile = {
   email: 'dawenskydaky98@gmail.com',
   phone: '+50937007978',
   phoneDisplay: '+509 3700 7978',
-  whatsapp: 'https://wa.me/50937007978',
+  whatsapp: 'https://wa.me/50939306285',
   linkedin: 'https://www.linkedin.com/in/dawenskythermildort',
   facebook: 'https://www.facebook.com/dawensky.thermildort',
   cv: '/cv-dawensky.pdf',
@@ -40,7 +40,6 @@ export const content = {
       ],
       hello: 'Hello',
       subtitle: '— It’s Dawensky, a risk & data analyst',
-      badge: 'Valedictorian · Class of 2020',
       scroll: 'Scroll down',
       photoAlt: 'Portrait of Dawensky Thermildort',
     },
@@ -157,6 +156,7 @@ export const content = {
     education: {
       label: 'Education',
       heading: 'Academic background',
+      honor: 'Valedictorian',
       items: [
         {
           school: 'UNITECH | Banque de la République d’Haïti',
@@ -189,9 +189,9 @@ export const content = {
       verifyLabel: 'Verify',
       skillsLabel: 'Skills',
       items: [
-        { name: 'Career Essentials in Generative AI', issuer: 'Microsoft & LinkedIn', date: 'Jan 2024', skills: ['Microsoft Copilot', 'Generative AI', 'Responsible AI'], file: '/certificates/generative-ai-ms-linkedin.pdf' },
-        { name: 'Career Essentials in Data Analysis', issuer: 'Microsoft & LinkedIn', date: 'Feb 2024', skills: ['Data Analysis', 'Data Visualization', 'Data Analytics'], file: '/certificates/data-analysis-ms-linkedin.pdf' },
-        { name: 'Career Essentials in Business Analysis', issuer: 'Microsoft & LinkedIn', date: 'Feb 2023', skills: ['Requirements Gathering', 'Project Management', 'Business Analysis'], file: '/certificates/business-analysis-ms-linkedin.pdf' },
+        { name: 'Career Essentials in Generative AI', issuer: 'Microsoft & LinkedIn', date: 'Jan 2024', skills: ['Microsoft Copilot', 'Generative AI', 'Responsible AI'], file: '/certificates/generative-ai-ms-linkedin.pdf', verify: 'https://www.linkedin.com/learning/certificates/2f0d358c7e7ad1b9d284334f4038b675747b6cadaaf48c3b477a7cdd559fc8c5?trk=share_certificate' },
+        { name: 'Career Essentials in Data Analysis', issuer: 'Microsoft & LinkedIn', date: 'Feb 2024', skills: ['Data Analysis', 'Data Visualization', 'Data Analytics'], file: '/certificates/data-analysis-ms-linkedin.pdf', verify: 'https://www.linkedin.com/learning/certificates/d1fa535e16c9f28a925a3cd68e30634d179c0a9ed3608c2fae07c6cae193b19f?trk=share_certificate' },
+        { name: 'Career Essentials in Business Analysis', issuer: 'Microsoft & LinkedIn', date: 'Feb 2023', skills: ['Requirements Gathering', 'Project Management', 'Business Analysis'], file: '/certificates/business-analysis-ms-linkedin.pdf', verify: 'https://www.linkedin.com/learning/certificates/b1d001ae524ac46e8069d1e40d57c8fb89a7db2e39d7f637af01a74c29e05250?trk=share_certificate' },
         { name: 'Foundations: Data, Data, Everywhere', issuer: 'Google · Coursera', date: 'Sep 2023', skills: ['Data', 'Analytics'], file: '/certificates/google-data-foundations-coursera.pdf', verify: 'https://coursera.org/verify/YG668EZWKYBU' },
         { name: 'Oracle Database Foundations', issuer: 'Oracle', date: '', skills: ['SQL', 'Databases'] },
         { name: 'AI in Risk Management & Fraud Detection', issuer: 'Professional training', date: '', skills: ['AI', 'Risk', 'Fraud Detection'] },
@@ -257,7 +257,6 @@ export const content = {
       ],
       hello: 'Bonjour',
       subtitle: '— Dawensky, analyste risque & data',
-      badge: 'Major de promotion · 2020',
       scroll: 'Défiler',
       photoAlt: 'Portrait de Dawensky Thermildort',
     },
@@ -374,6 +373,7 @@ export const content = {
     education: {
       label: 'Formation',
       heading: 'Parcours académique',
+      honor: 'Major de promotion',
       items: [
         {
           school: 'UNITECH | Banque de la République d’Haïti',
@@ -406,9 +406,9 @@ export const content = {
       verifyLabel: 'Vérifier',
       skillsLabel: 'Compétences',
       items: [
-        { name: 'Career Essentials in Generative AI', issuer: 'Microsoft & LinkedIn', date: 'Janv. 2024', skills: ['Microsoft Copilot', 'IA générative', 'IA responsable'], file: '/certificates/generative-ai-ms-linkedin.pdf' },
-        { name: 'Career Essentials in Data Analysis', issuer: 'Microsoft & LinkedIn', date: 'Févr. 2024', skills: ['Analyse de données', 'Visualisation', 'Data Analytics'], file: '/certificates/data-analysis-ms-linkedin.pdf' },
-        { name: 'Career Essentials in Business Analysis', issuer: 'Microsoft & LinkedIn', date: 'Févr. 2023', skills: ['Expression des besoins', 'Gestion de projet', 'Analyse business'], file: '/certificates/business-analysis-ms-linkedin.pdf' },
+        { name: 'Career Essentials in Generative AI', issuer: 'Microsoft & LinkedIn', date: 'Janv. 2024', skills: ['Microsoft Copilot', 'IA générative', 'IA responsable'], file: '/certificates/generative-ai-ms-linkedin.pdf', verify: 'https://www.linkedin.com/learning/certificates/2f0d358c7e7ad1b9d284334f4038b675747b6cadaaf48c3b477a7cdd559fc8c5?trk=share_certificate' },
+        { name: 'Career Essentials in Data Analysis', issuer: 'Microsoft & LinkedIn', date: 'Févr. 2024', skills: ['Analyse de données', 'Visualisation', 'Data Analytics'], file: '/certificates/data-analysis-ms-linkedin.pdf', verify: 'https://www.linkedin.com/learning/certificates/d1fa535e16c9f28a925a3cd68e30634d179c0a9ed3608c2fae07c6cae193b19f?trk=share_certificate' },
+        { name: 'Career Essentials in Business Analysis', issuer: 'Microsoft & LinkedIn', date: 'Févr. 2023', skills: ['Expression des besoins', 'Gestion de projet', 'Analyse business'], file: '/certificates/business-analysis-ms-linkedin.pdf', verify: 'https://www.linkedin.com/learning/certificates/b1d001ae524ac46e8069d1e40d57c8fb89a7db2e39d7f637af01a74c29e05250?trk=share_certificate' },
         { name: 'Foundations: Data, Data, Everywhere', issuer: 'Google · Coursera', date: 'Sept. 2023', skills: ['Données', 'Analytique'], file: '/certificates/google-data-foundations-coursera.pdf', verify: 'https://coursera.org/verify/YG668EZWKYBU' },
         { name: 'Oracle Database Foundations', issuer: 'Oracle', date: '', skills: ['SQL', 'Bases de données'] },
         { name: 'AI in Risk Management & Fraud Detection', issuer: 'Formation professionnelle', date: '', skills: ['IA', 'Risque', 'Détection de fraude'] },

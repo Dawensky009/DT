@@ -28,7 +28,7 @@ export default function Education() {
                   {edu.highlight && (
                     <span className="inline-flex items-center gap-1 rounded-full border border-ink/20 px-2.5 py-1 text-[0.7rem] font-medium text-ink">
                       <Star size={11} className="fill-ink" />
-                      {t.hero.badge.split(' · ')[0]}
+                      {t.education.honor}
                     </span>
                   )}
                 </div>
