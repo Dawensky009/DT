@@ -28,7 +28,9 @@ export default function Cursor() {
     const onMove = (e) => {
       dotX.set(e.clientX)
       dotY.set(e.clientY)
-      setHidden(false)
+      // hide the cursor visuals over photos so the color-reveal spotlight reads cleanly
+      const overHide = e.target instanceof Element && e.target.closest('[data-cursor="hide"]')
+      setHidden(Boolean(overHide))
       const overInteractive = e.target instanceof Element && e.target.closest(interactiveSel)
       setHovering(Boolean(overInteractive))
     }

@@ -4,9 +4,12 @@ import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Services from './components/Services.jsx'
-import Journey from './components/Journey.jsx'
-import Banner from './components/Banner.jsx'
+import Expertise from './components/Expertise.jsx'
+import Experience from './components/Experience.jsx'
+import Education from './components/Education.jsx'
+import Certifications from './components/Certifications.jsx'
 import Work from './components/Work.jsx'
+import Banner from './components/Banner.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -25,9 +28,12 @@ export default function App() {
         <Hero />
         <About />
         <Services />
-        <Journey />
-        <Banner />
+        <Expertise />
+        <Experience />
+        <Education />
+        <Certifications />
         <Work />
+        <Banner />
       </main>
       <Footer />
     </>

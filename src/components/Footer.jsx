@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, ArrowUp } from 'lucide-react'
+import { Mail, MessageCircle, ArrowUp, Phone } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
 import Reveal from './Reveal.jsx'
@@ -45,9 +45,24 @@ export default function Footer() {
             <span className="ml-1 text-sm text-white/50">{t.footerCta.reply}</span>
           </div>
 
-          <a href={mailto} className="mt-10 inline-block font-display text-2xl text-paper sm:text-3xl">
-            <span className="link-underline">{profile.email}</span>
-          </a>
+          {/* direct line */}
+          <div className="mt-12 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:gap-16">
+            <div>
+              <p className="text-[0.7rem] font-semibold uppercase tracking-label text-white/40">
+                {t.footerCta.directLabel}
+              </p>
+              <a href={mailto} className="mt-3 block font-display text-2xl text-paper sm:text-3xl">
+                <span className="link-underline">{profile.email}</span>
+              </a>
+              <a
+                href={`tel:${profile.phone}`}
+                className="mt-2 flex items-center gap-2 text-base text-white/70 transition-colors hover:text-paper"
+              >
+                <Phone size={15} />
+                {profile.phoneDisplay}
+              </a>
+            </div>
+          </div>
         </Reveal>
       </div>
 
