@@ -31,9 +31,8 @@ export default function Nav() {
       }`}
     >
       <nav className="container-page flex h-16 items-center justify-between sm:h-20">
-        <a href="#top" onClick={close} className="flex items-center gap-2.5" aria-label={profile.name}>
-          <img src={profile.logo} alt="" className="h-8 w-8 object-contain" />
-          <span className="font-display text-2xl leading-none">{profile.name.split(' ')[0]}</span>
+        <a href="#top" onClick={close} className="flex items-center" aria-label={profile.name}>
+          <img src={profile.logo} alt={profile.name} className="h-11 w-auto object-contain sm:h-14" />
         </a>
 
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex">

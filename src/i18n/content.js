@@ -114,10 +114,12 @@ export const content = {
           period: 'Apr 2026 — Present',
           location: 'Port-au-Prince',
           bullets: [
-            'Drive business growth while implementing robust fraud-prevention measures across products.',
-            'Monitor all revenue aspects to ensure financial integrity and compliance.',
-            'Lead and mentor team members, fostering a culture of continuous improvement.',
-            'Conduct thorough pre- and post-launch product validations to raise quality.',
+            'Indirectly lead a team of 4 analysts — mentoring, reviewing work and onboarding new members.',
+            'Evaluate risk and analyze potential business threats across products and services.',
+            'Validate and oversee products and services before and after launch.',
+            'Prevent fraud and revenue loss, with real-time detection via system alerts.',
+            'Ensure compliance with regulatory requirements and risk-management policies.',
+            'Collaborate with Finance, Compliance and Legal teams to keep strategies aligned.',
           ],
         },
         {
@@ -126,8 +128,12 @@ export const content = {
           period: 'Dec 2022 — Apr 2026',
           location: 'Ouest, Haiti',
           bullets: [
-            'Performed risk analysis, revenue assurance and compliance monitoring across the product portfolio.',
-            'Built interactive dashboards (Power BI, Excel) for strategic decision-making.',
+            'Designed dashboards (Power BI, Excel) for strategic risk and revenue monitoring.',
+            'Established and oversaw daily and monthly reconciliation processes for transaction accuracy.',
+            'Guaranteed data availability for critical reporting.',
+            'Wrote PL/SQL scripts to automate recurring tasks.',
+            'Documented new procedures to ease team onboarding.',
+            'Trained new team members.',
           ],
         },
         {
@@ -212,9 +218,11 @@ export const content = {
     },
 
     banner: {
-      kicker: 'Free 30-minute consultation',
-      heading: 'Let’s find the clarity hiding in your numbers.',
-      cta: 'Book a call',
+      kicker: 'Website creation',
+      heading: 'Need a website that turns visitors into clients?',
+      text: 'This very site is the proof — let’s build yours.',
+      cta: 'Start your website',
+      emailSubject: 'Website project — from your portfolio',
     },
 
     footerCta: {
@@ -331,10 +339,12 @@ export const content = {
           period: 'Avr. 2026 — Présent',
           location: 'Port-au-Prince',
           bullets: [
-            'Soutenir la croissance tout en déployant des mesures robustes de prévention de la fraude sur les produits.',
-            'Surveiller l’ensemble des revenus pour garantir l’intégrité financière et la conformité.',
-            'Encadrer et accompagner l’équipe, dans une culture d’amélioration continue.',
-            'Mener des validations produit avant et après lancement pour rehausser la qualité.',
+            'Encadrer indirectement une équipe de 4 analystes — mentorat, revue du travail et intégration des nouveaux membres.',
+            'Évaluer les risques et analyser les menaces commerciales potentielles sur les produits et services.',
+            'Valider et superviser les produits et services avant et après leur lancement.',
+            'Prévenir la fraude et les pertes de revenus, avec détection en temps réel (alertes système).',
+            'Garantir la conformité aux exigences réglementaires et aux politiques de gestion des risques.',
+            'Collaborer avec les départements Finance, Conformité et Juridique pour aligner les stratégies.',
           ],
         },
         {
@@ -343,8 +353,12 @@ export const content = {
           period: 'Déc. 2022 — Avr. 2026',
           location: 'Ouest, Haïti',
           bullets: [
-            'Analyse des risques, assurance revenus et suivi de la conformité sur le portefeuille de produits.',
-            'Conception de tableaux de bord interactifs (Power BI, Excel) pour la décision stratégique.',
+            'Concevoir des tableaux de bord (Power BI, Excel) pour le suivi stratégique des risques et des revenus.',
+            'Établir et superviser les rapprochements quotidiens et mensuels pour l’exactitude des transactions financières.',
+            'Garantir la disponibilité des données pour la génération de rapports critiques.',
+            'Créer des scripts PL/SQL pour automatiser les tâches récurrentes.',
+            'Documenter les nouvelles procédures pour faciliter la prise en main.',
+            'Former les nouveaux employés de l’équipe.',
           ],
         },
         {
@@ -429,9 +443,11 @@ export const content = {
     },
 
     banner: {
-      kicker: 'Consultation gratuite de 30 minutes',
-      heading: 'Révélons la clarté cachée dans vos chiffres.',
-      cta: 'Réserver un appel',
+      kicker: 'Création de site web',
+      heading: 'Besoin d’un site qui transforme vos visiteurs en clients ?',
+      text: 'Ce site en est la preuve — construisons le vôtre.',
+      cta: 'Lancer mon site',
+      emailSubject: 'Projet de site web — via votre portfolio',
     },
 
     footerCta: {
