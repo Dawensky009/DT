@@ -1,45 +1,39 @@
-import { Code2, GraduationCap, ShieldCheck, Check } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import Reveal from './Reveal.jsx'
-import SectionHeader from './SectionHeader.jsx'
-
-const icons = {
-  shield: ShieldCheck,
-  graduation: GraduationCap,
-  code: Code2,
-}
 
 export default function Services() {
   const { t } = useLang()
 
   return (
-    <section id="services" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="services" className="scroll-mt-24 bg-canvas py-24 sm:py-32">
       <div className="container-page">
-        <SectionHeader label={t.services.label} heading={t.services.heading} intro={t.services.intro} />
+        <Reveal className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="eyebrow">{t.services.label}</p>
+            <h2 className="mt-4 text-4xl sm:text-5xl">{t.services.heading}</h2>
+          </div>
+          <p className="max-w-sm text-base leading-relaxed text-muted">{t.services.intro}</p>
+        </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {t.services.items.map((service, i) => {
-            const Icon = icons[service.icon] ?? ShieldCheck
-            return (
-              <Reveal key={service.name} delay={i * 0.1}>
-                <article className="group flex h-full flex-col rounded-2xl border border-hairline bg-surface p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-card-hover">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white transition-colors duration-300 group-hover:bg-accent">
-                    <Icon size={22} />
-                  </span>
-                  <h3 className="mt-5 text-xl font-semibold">{service.name}</h3>
-                  <p className="mt-3 flex-1 text-[15px] leading-relaxed text-muted">{service.desc}</p>
-                  <ul className="mt-5 space-y-2 border-t border-hairline pt-5">
-                    {service.points.map((point) => (
-                      <li key={point} className="flex items-center gap-2 text-sm text-primary">
-                        <Check size={16} className="shrink-0 text-accent" />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            )
-          })}
+        <div className="mt-14 border-t border-line">
+          {t.services.items.map((service, i) => (
+            <Reveal key={service.no} delay={i * 0.08}>
+              <a
+                href="#contact"
+                className="group grid grid-cols-1 gap-3 border-b border-line py-9 transition-colors duration-300 hover:bg-paper sm:grid-cols-[auto_1fr_auto] sm:items-baseline sm:gap-8 sm:px-4"
+              >
+                <span className="font-display text-2xl text-muted">{service.no}</span>
+                <div className="max-w-2xl">
+                  <h3 className="font-display text-3xl text-ink sm:text-4xl">{service.name}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-muted">{service.desc}</p>
+                </div>
+                <span className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-paper">
+                  <ArrowUpRight size={18} />
+                </span>
+              </a>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

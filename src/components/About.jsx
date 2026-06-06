@@ -1,49 +1,49 @@
-import { Download } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
-import { profile } from '../i18n/content.js'
+import { useCountUp } from '../hooks/useCountUp.js'
 import Reveal from './Reveal.jsx'
 
 export default function About() {
   const { t } = useLang()
+  const [statRef, statValue] = useCountUp(t.about.stat.value)
 
   return (
-    <section id="about" className="scroll-mt-24 py-20 sm:py-28">
-      <div className="container-page grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-        {/* portrait */}
-        <Reveal className="order-2 lg:order-1">
-          <div className="relative mx-auto max-w-sm">
-            <div className="bg-grid absolute -inset-4 -z-10 rounded-[2rem] opacity-70" />
-            <div className="overflow-hidden rounded-[1.75rem] border border-hairline bg-surface shadow-card">
-              <img
-                src={profile.photo}
-                alt={t.about.photoAlt}
-                className="aspect-[4/5] w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
+    <section id="about" className="scroll-mt-24 border-t border-line py-24 sm:py-32">
+      <div className="container-page">
+        <Reveal>
+          <p className="eyebrow">{t.about.label}</p>
         </Reveal>
 
-        {/* copy */}
-        <Reveal className="order-1 lg:order-2" delay={0.1}>
-          <span className="section-label">{t.about.label}</span>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
-            {t.about.heading}
-          </h2>
-          <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
-            {t.about.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
-          <a
-            href={profile.cv}
-            download
-            className="btn-ghost mt-8 hover:border-accent hover:text-accent"
-          >
-            <Download size={18} />
-            {t.about.cvCta}
-          </a>
-        </Reveal>
+        <div className="mt-8 grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-20">
+          {/* heading + paragraphs */}
+          <Reveal>
+            <h2 className="max-w-2xl text-4xl leading-[1.1] sm:text-5xl">{t.about.heading}</h2>
+            <div className="mt-8 max-w-xl space-y-5 text-lg leading-relaxed text-muted">
+              {t.about.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* stat + credentials */}
+          <Reveal delay={0.1} className="lg:pt-2">
+            <div ref={statRef} className="border-b border-line pb-6">
+              <p className="font-display text-7xl leading-none sm:text-8xl">
+                {statValue}
+                <span className="text-muted">{t.about.stat.suffix}</span>
+              </p>
+              <p className="mt-3 text-sm text-muted">{t.about.stat.label}</p>
+            </div>
+            <ul className="mt-6 space-y-3">
+              {t.about.credentials.map((c) => (
+                <li key={c} className="flex items-start gap-3 text-sm text-ink">
+                  <Check size={16} className="mt-0.5 shrink-0 text-muted" />
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
       </div>
     </section>
   )

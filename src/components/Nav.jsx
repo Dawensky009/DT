@@ -4,18 +4,17 @@ import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
 
 export default function Nav() {
-  const { t, lang, toggle } = useLang()
+  const { t, lang, setLang } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
+    const onScroll = () => setScrolled(window.scrollY > 16)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // lock body scroll when the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => {
@@ -26,90 +25,97 @@ export default function Nav() {
   const close = () => setOpen(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
-      <nav
-        className={`container-page flex items-center justify-between rounded-2xl border px-4 py-3 transition-all duration-300 sm:px-6 ${
-          scrolled || open
-            ? 'border-hairline bg-surface/90 shadow-card backdrop-blur-md'
-            : 'border-transparent bg-surface/40 backdrop-blur-sm'
-        }`}
-      >
-        <a href="#top" onClick={close} className="flex items-center gap-2" aria-label={profile.name}>
-          <img src={profile.logo} alt="" className="h-9 w-9 object-contain" />
-          <span className="font-display text-lg font-semibold text-primary">Dawensky</span>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled || open ? 'border-b border-line bg-paper/85 backdrop-blur-md' : 'border-b border-transparent'
+      }`}
+    >
+      <nav className="container-page flex h-16 items-center justify-between sm:h-20">
+        <a href="#top" onClick={close} className="flex items-center gap-2.5" aria-label={profile.name}>
+          <img src={profile.logo} alt="" className="h-8 w-8 object-contain" />
+          <span className="font-display text-2xl leading-none">{profile.name.split(' ')[0]}</span>
         </a>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex">
           {t.nav.links.map((link) => (
             <li key={link.id}>
-              <a
-                href={`#${link.id}`}
-                className="text-sm font-medium text-muted transition-colors duration-200 hover:text-primary"
-              >
+              <a href={`#${link.id}`} className="link-underline text-sm text-muted hover:text-ink">
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
 
-        <div className="flex items-center gap-2 sm:gap-3">
-          <button
-            type="button"
-            onClick={toggle}
-            aria-label={t.nav.langSwitch}
-            className="flex cursor-pointer items-center rounded-full border border-hairline bg-surface p-0.5 text-xs font-semibold"
-          >
-            <span
-              className={`rounded-full px-2.5 py-1 transition-colors ${
-                lang === 'en' ? 'bg-primary text-white' : 'text-muted'
-              }`}
+        <div className="flex items-center gap-5">
+          <div className="hidden items-center gap-1 text-sm font-medium sm:flex" aria-label={t.nav.langSwitch}>
+            <button
+              type="button"
+              onClick={() => setLang('en')}
+              className={`cursor-pointer transition-opacity ${lang === 'en' ? 'text-ink' : 'text-muted/50 hover:text-muted'}`}
             >
               EN
-            </span>
-            <span
-              className={`rounded-full px-2.5 py-1 transition-colors ${
-                lang === 'fr' ? 'bg-primary text-white' : 'text-muted'
-              }`}
+            </button>
+            <span className="text-muted/40">/</span>
+            <button
+              type="button"
+              onClick={() => setLang('fr')}
+              className={`cursor-pointer transition-opacity ${lang === 'fr' ? 'text-ink' : 'text-muted/50 hover:text-muted'}`}
             >
               FR
-            </span>
-          </button>
+            </button>
+          </div>
 
-          <a href="#contact" className="btn-primary hidden h-10 px-5 py-0 sm:inline-flex">
+          <a href="#contact" className="hidden text-sm font-medium lg:inline-block link-underline">
             {t.nav.cta}
           </a>
 
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-hairline bg-surface text-primary lg:hidden"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-ink lg:hidden"
             aria-label={open ? t.nav.menuClose : t.nav.menuOpen}
             aria-expanded={open}
           >
-            {open ? <X size={20} /> : <Menu size={20} />}
+            {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="container-page mt-2 rounded-2xl border border-hairline bg-surface p-4 shadow-card lg:hidden">
-          <ul className="flex flex-col">
+        <div className="border-t border-line bg-paper lg:hidden">
+          <ul className="container-page flex flex-col py-3">
             {t.nav.links.map((link) => (
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
                   onClick={close}
-                  className="block rounded-lg px-3 py-3 text-base font-medium text-primary transition-colors hover:bg-canvas"
+                  className="block py-3 font-display text-2xl text-ink"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
+            <li className="mt-2 flex items-center gap-3 border-t border-line pt-4 text-sm font-medium">
+              <button
+                type="button"
+                onClick={() => setLang('en')}
+                className={`cursor-pointer ${lang === 'en' ? 'text-ink' : 'text-muted'}`}
+              >
+                EN
+              </button>
+              <span className="text-muted/40">/</span>
+              <button
+                type="button"
+                onClick={() => setLang('fr')}
+                className={`cursor-pointer ${lang === 'fr' ? 'text-ink' : 'text-muted'}`}
+              >
+                FR
+              </button>
+            </li>
+            <a href="#contact" onClick={close} className="btn-dark mt-4 w-full">
+              {t.nav.cta}
+            </a>
           </ul>
-          <a href="#contact" onClick={close} className="btn-primary mt-2 w-full">
-            {t.nav.cta}
-          </a>
         </div>
       )}
     </header>

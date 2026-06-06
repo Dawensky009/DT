@@ -9,27 +9,28 @@
 
   html {
     scroll-behavior: smooth;
-    /* offset for the floating nav when jumping to anchors */
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 5rem;
   }
 
   body {
-    @apply bg-canvas text-ink font-sans antialiased;
+    @apply bg-paper text-ink font-sans antialiased;
     text-rendering: optimizeLegibility;
+    font-feature-settings: 'ss01';
   }
 
   ::selection {
-    @apply bg-accent text-white;
+    @apply bg-ink text-paper;
   }
 
   h1, h2, h3, h4 {
-    @apply font-display text-primary;
+    @apply font-display text-ink;
+    font-weight: 400;
     text-wrap: balance;
+    letter-spacing: -0.01em;
   }
 
-  /* Visible, consistent focus ring for keyboard users */
   :focus-visible {
-    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-canvas;
+    @apply outline-none ring-2 ring-ink ring-offset-2 ring-offset-paper;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -46,30 +47,41 @@
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-container px-6 sm:px-8;
+    @apply mx-auto w-full max-w-container px-6 sm:px-10;
   }
 
-  .section-label {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent;
+  .eyebrow {
+    @apply text-[0.7rem] font-semibold uppercase tracking-label text-muted;
   }
 
+  /* Pill buttons — editorial monochrome */
   .btn {
-    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-dark {
+    @apply btn bg-ink text-paper hover:bg-dark;
+  }
+  .btn-outline {
+    @apply btn border border-ink/20 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper;
+  }
+  .btn-light {
+    @apply btn bg-paper text-ink hover:bg-canvas;
   }
 
-  .btn-primary {
-    @apply btn bg-accent text-white shadow-cta hover:bg-accent-hover;
+  /* Animated underline link */
+  .link-underline {
+    @apply relative inline-block text-ink transition-opacity hover:opacity-100;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-300;
+  }
+  .link-underline:hover::after {
+    @apply origin-left scale-x-100;
   }
 
-  .btn-ghost {
-    @apply btn border border-hairline bg-surface text-primary hover:border-accent hover:text-accent;
-  }
-
-  /* faint data-grid texture for atmospheric backgrounds */
-  .bg-grid {
-    background-image:
-      linear-gradient(to right, rgba(9, 9, 11, 0.045) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(9, 9, 11, 0.045) 1px, transparent 1px);
-    background-size: 44px 44px;
+  /* portrait: editorial grayscale that warms on hover */
+  .portrait {
+    @apply grayscale transition-all duration-700 ease-out hover:grayscale-0;
   }
 }
