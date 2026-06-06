@@ -24,21 +24,21 @@ export const content = {
         { id: 'journey', label: 'Journey' },
         { id: 'work', label: 'Work' },
       ],
-      cta: 'Get in touch',
+      cta: 'Book a call',
       menuOpen: 'Open menu',
       menuClose: 'Close menu',
       langSwitch: 'Switch to French',
     },
 
     hero: {
-      tagline: 'Business Risk Analyst — Data Analyst',
+      role: 'Risk & Data Analyst',
+      stats: [
+        { value: '20', label: 'Projects completed' },
+        { value: '5', label: 'Years in data & tech' },
+      ],
       hello: 'Hello',
-      intro:
-        'I’m Dawensky Thermildort. I turn data and risk into clear, confident business decisions — and, with a Computer Science background, build the websites that put insight to work.',
-      available: 'Available for new projects',
-      primaryCta: 'Start a project',
-      secondaryCta: 'See my work',
-      scroll: 'Scroll',
+      subtitle: '— It’s Dawensky, a risk & data analyst',
+      scroll: 'Scroll down',
       photoAlt: 'Portrait of Dawensky Thermildort',
     },
 
@@ -135,20 +135,20 @@ export const content = {
         { id: 'journey', label: 'Parcours' },
         { id: 'work', label: 'Projets' },
       ],
-      cta: 'Me contacter',
+      cta: 'Réserver un appel',
       menuOpen: 'Ouvrir le menu',
       menuClose: 'Fermer le menu',
       langSwitch: 'Passer en anglais',
     },
 
     hero: {
-      tagline: 'Analyste des risques — Analyste de données',
+      role: 'Analyste risque & data',
+      stats: [
+        { value: '20', label: 'Projets réalisés' },
+        { value: '5', label: 'Ans en data & tech' },
+      ],
       hello: 'Bonjour',
-      intro:
-        'Je suis Dawensky Thermildort. Je transforme données et risques en décisions claires et assurées — et, formé en informatique, je crée les sites web qui mettent ces insights en action.',
-      available: 'Disponible pour de nouveaux projets',
-      primaryCta: 'Démarrer un projet',
-      secondaryCta: 'Voir mes projets',
+      subtitle: '— Dawensky, analyste risque & data',
       scroll: 'Défiler',
       photoAlt: 'Portrait de Dawensky Thermildort',
     },

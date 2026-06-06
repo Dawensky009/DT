@@ -13,9 +13,8 @@
   }
 
   body {
-    @apply bg-paper text-ink font-sans antialiased;
+    @apply bg-canvas text-ink font-sans antialiased;
     text-rendering: optimizeLegibility;
-    font-feature-settings: 'ss01';
   }
 
   ::selection {
@@ -24,9 +23,9 @@
 
   h1, h2, h3, h4 {
     @apply font-display text-ink;
-    font-weight: 400;
+    font-weight: 500;
     text-wrap: balance;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   :focus-visible {
@@ -51,10 +50,10 @@
   }
 
   .eyebrow {
-    @apply text-[0.7rem] font-semibold uppercase tracking-label text-muted;
+    @apply text-[0.7rem] font-medium uppercase tracking-label text-muted;
   }
 
-  /* Pill buttons — editorial monochrome */
+  /* Pill buttons */
   .btn {
     @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-60;
   }
@@ -70,7 +69,7 @@
 
   /* Animated underline link */
   .link-underline {
-    @apply relative inline-block text-ink transition-opacity hover:opacity-100;
+    @apply relative inline-block transition-opacity;
   }
   .link-underline::after {
     content: '';
@@ -80,8 +79,49 @@
     @apply origin-left scale-x-100;
   }
 
-  /* portrait: editorial grayscale that warms on hover */
+  /* editorial grayscale portrait */
   .portrait {
-    @apply grayscale transition-all duration-700 ease-out hover:grayscale-0;
+    @apply grayscale transition-all duration-700 ease-out;
+  }
+}
+
+@layer utilities {
+  .text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+/* ---- Custom cursor (fine-pointer devices only) ---- */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+.cursor-dot {
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  background: #fff;
+}
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 1px solid #fff;
+}
+
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body.has-cursor,
+  body.has-cursor a,
+  body.has-cursor button,
+  body.has-cursor [role='button'] {
+    cursor: none;
   }
 }

@@ -1,87 +1,150 @@
-import { motion } from 'framer-motion'
-import { ArrowDownRight } from 'lucide-react'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { ArrowDown } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
 
-const stagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
-}
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+const rise = {
+  hidden: { opacity: 0, y: 24 },
+  show: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay: 0.1 + i * 0.08, ease: [0.22, 1, 0.36, 1] },
+  }),
 }
 
 export default function Hero() {
   const { t } = useLang()
+  const heroRef = useRef(null)
+  const year = new Date().getFullYear()
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  })
+  const portraitY = useTransform(scrollYProgress, [0, 1], ['0%', '-12%'])
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 80])
+  const fade = useTransform(scrollYProgress, [0, 0.6], [1, 0])
+
+  const Stats = () => (
+    <div className="flex gap-10 sm:gap-14">
+      {t.hero.stats.map((s) => (
+        <div key={s.label}>
+          <p className="flex items-start font-display text-4xl font-medium leading-none sm:text-5xl">
+            <span className="mt-1 text-xl sm:text-2xl">+</span>
+            {s.value}
+          </p>
+          <p className="mt-2 max-w-[8rem] text-xs text-muted sm:text-sm">{s.label}</p>
+        </div>
+      ))}
+    </div>
+  )
 
   return (
-    <section id="top" className="relative overflow-hidden pt-28 sm:pt-32">
+    <section id="top" ref={heroRef} className="relative flex min-h-screen flex-col overflow-hidden bg-canvas">
+      {/* Desktop portrait — bleeds to top/right, parallax */}
       <motion.div
-        variants={stagger}
+        style={{ y: portraitY }}
+        className="absolute inset-y-0 right-0 z-0 hidden lg:block lg:w-[48%]"
+        data-cursor="hide"
+      >
+        <div
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-2/5 bg-gradient-to-r from-canvas via-canvas/60 to-transparent"
+          aria-hidden="true"
+        />
+        <motion.img
+          src={profile.photo}
+          alt={t.hero.photoAlt}
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="portrait h-full w-full object-cover object-top"
+          loading="eager"
+        />
+      </motion.div>
+
+      {/* Vertical role label — far left (desktop) */}
+      <motion.div
+        variants={rise}
         initial="hidden"
         animate="show"
-        className="container-page pb-12 sm:pb-16"
+        custom={4}
+        className="absolute left-6 top-1/2 z-20 hidden -translate-y-1/2 flex-col items-center gap-5 lg:flex"
       >
-        {/* top line: tagline + availability */}
-        <motion.div
-          variants={item}
-          className="flex flex-col gap-3 border-b border-line pb-6 sm:flex-row sm:items-center sm:justify-between"
-        >
-          <p className="eyebrow">{t.hero.tagline}</p>
-          <span className="inline-flex items-center gap-2 text-sm text-muted">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-spark opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-spark" />
-            </span>
-            {t.hero.available}
-          </span>
+        <span className="h-28 w-px bg-ink/25" />
+        <span className="text-vertical rotate-180 text-xs uppercase tracking-label text-muted">
+          {t.hero.role}
+        </span>
+      </motion.div>
+
+      {/* Foreground content */}
+      <motion.div
+        style={{ y: contentY }}
+        className="container-page relative z-20 flex flex-1 flex-col pt-24 sm:pt-28 lg:justify-center lg:pb-28"
+      >
+        <motion.div variants={rise} initial="hidden" animate="show" custom={0}>
+          <Stats />
         </motion.div>
 
-        {/* main row: giant Hello + portrait */}
-        <div className="grid items-end gap-8 pt-8 lg:grid-cols-[1.5fr_1fr] lg:gap-12 lg:pt-12">
-          <div>
-            <motion.h1
-              variants={item}
-              className="font-display text-[24vw] leading-[0.82] tracking-tight sm:text-[18vw] lg:text-[13rem]"
-            >
-              {t.hero.hello}
-              <span className="text-muted">.</span>
-            </motion.h1>
-
-            <motion.p
-              variants={item}
-              className="mt-8 max-w-xl text-lg leading-relaxed text-muted sm:text-xl"
-            >
-              {t.hero.intro}
-            </motion.p>
-
-            <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-3">
-              <a href="#contact" className="btn-dark">{t.hero.primaryCta}</a>
-              <a href="#work" className="btn-outline">{t.hero.secondaryCta}</a>
-            </motion.div>
-          </div>
-
-          {/* portrait */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="group relative mx-auto w-full max-w-xs lg:max-w-none"
+        <div className="mt-10 sm:mt-14">
+          <motion.h1
+            variants={rise}
+            initial="hidden"
+            animate="show"
+            custom={1}
+            className="font-display text-[27vw] font-medium leading-[0.85] tracking-tight sm:text-[20vw] lg:text-[15rem] xl:text-[17rem]"
           >
-            <div className="overflow-hidden rounded-2xl bg-canvas">
-              <img
-                src={profile.photo}
-                alt={t.hero.photoAlt}
-                className="portrait aspect-[4/5] w-full object-cover"
-                loading="eager"
-              />
-            </div>
-            <span className="mt-3 flex items-center justify-between text-xs text-muted">
-              <span>{profile.name}</span>
-              <ArrowDownRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
-            </span>
-          </motion.div>
+            {t.hero.hello}
+          </motion.h1>
+          <motion.p
+            variants={rise}
+            initial="hidden"
+            animate="show"
+            custom={2}
+            className="mt-4 text-base text-muted sm:text-lg"
+          >
+            {t.hero.subtitle}
+          </motion.p>
+        </div>
+
+        {/* Mobile portrait — contained, in flow */}
+        <motion.div
+          variants={rise}
+          initial="hidden"
+          animate="show"
+          custom={3}
+          className="mt-10 overflow-hidden rounded-2xl lg:hidden"
+        >
+          <img
+            src={profile.photo}
+            alt={t.hero.photoAlt}
+            className="portrait aspect-[5/4] w-full object-cover object-top"
+            loading="eager"
+          />
+        </motion.div>
+
+        {/* Mobile scroll-down */}
+        <a
+          href="#about"
+          className="mt-8 inline-flex items-center gap-2 self-start text-sm font-medium text-ink lg:hidden"
+        >
+          {t.hero.scroll}
+          <ArrowDown size={16} className="animate-scroll-bounce" />
+        </a>
+      </motion.div>
+
+      {/* Bottom-left: year + scroll (desktop) */}
+      <motion.div style={{ opacity: fade }} className="absolute bottom-7 left-0 z-20 hidden w-full lg:block">
+        <div className="container-page flex items-end gap-8">
+          <span className="text-vertical text-xs tracking-label text-muted">{year}</span>
+          <a
+            href="#about"
+            className="group flex items-center gap-2 text-sm font-medium text-ink"
+            data-cursor="link"
+          >
+            {t.hero.scroll}
+            <ArrowDown size={16} className="animate-scroll-bounce" />
+          </a>
         </div>
       </motion.div>
     </section>

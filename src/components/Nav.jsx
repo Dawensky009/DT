@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ArrowUpRight } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
 
@@ -65,8 +65,13 @@ export default function Nav() {
             </button>
           </div>
 
-          <a href="#contact" className="hidden text-sm font-medium lg:inline-block link-underline">
-            {t.nav.cta}
+          <a
+            href="#contact"
+            data-cursor="link"
+            className="hidden items-center gap-1 text-sm font-medium lg:inline-flex"
+          >
+            <span className="link-underline">{t.nav.cta}</span>
+            <ArrowUpRight size={15} />
           </a>
 
           <button

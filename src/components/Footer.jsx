@@ -25,7 +25,7 @@ export default function Footer() {
           <h2 className="mt-6 font-display text-[15vw] leading-[0.95] text-paper sm:text-7xl lg:text-8xl">
             {t.footerCta.heading[0]}
             <br />
-            <span className="italic text-white/60">{t.footerCta.heading[1]}</span>
+            <span className="text-white/55">{t.footerCta.heading[1]}</span>
           </h2>
 
           <div className="mt-12 flex flex-wrap items-center gap-3">

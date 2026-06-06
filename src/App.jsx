@@ -1,3 +1,5 @@
+import Cursor from './components/Cursor.jsx'
+import ScrollProgress from './components/ScrollProgress.jsx'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
@@ -16,6 +18,8 @@ export default function App() {
       >
         Skip to content
       </a>
+      <Cursor />
+      <ScrollProgress />
       <Nav />
       <main>
         <Hero />
