@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Menu, X, ArrowUpRight } from 'lucide-react'
+import { Menu, X, Mail } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
 
@@ -47,31 +47,33 @@ export default function Nav() {
         </ul>
 
         <div className="flex items-center gap-5">
-          <div className="hidden items-center gap-1 text-sm font-medium sm:flex" aria-label={t.nav.langSwitch}>
+          <div
+            className="hidden items-center gap-1 rounded-full border border-line bg-paper/80 px-1 py-1 text-sm font-semibold shadow-sm backdrop-blur sm:flex"
+            aria-label={t.nav.langSwitch}
+          >
             <button
               type="button"
               onClick={() => setLang('en')}
-              className={`cursor-pointer transition-opacity ${lang === 'en' ? 'text-ink' : 'text-muted/50 hover:text-muted'}`}
+              className={`cursor-pointer rounded-full px-2.5 py-0.5 transition-colors ${lang === 'en' ? 'bg-ink text-paper' : 'text-muted hover:text-ink'}`}
             >
               EN
             </button>
-            <span className="text-muted/40">/</span>
             <button
               type="button"
               onClick={() => setLang('fr')}
-              className={`cursor-pointer transition-opacity ${lang === 'fr' ? 'text-ink' : 'text-muted/50 hover:text-muted'}`}
+              className={`cursor-pointer rounded-full px-2.5 py-0.5 transition-colors ${lang === 'fr' ? 'bg-ink text-paper' : 'text-muted hover:text-ink'}`}
             >
               FR
             </button>
           </div>
 
           <a
-            href="#contact"
+            href={`mailto:${profile.email}`}
             data-cursor="link"
-            className="hidden items-center gap-1 text-sm font-medium lg:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper shadow-sm transition-colors hover:bg-dark lg:inline-flex"
           >
-            <span className="link-underline">{t.nav.cta}</span>
-            <ArrowUpRight size={15} />
+            <Mail size={15} />
+            {t.nav.cta}
           </a>
 
           <button
@@ -117,7 +119,8 @@ export default function Nav() {
                 FR
               </button>
             </li>
-            <a href="#contact" onClick={close} className="btn-dark mt-4 w-full">
+            <a href={`mailto:${profile.email}`} onClick={close} className="btn-dark mt-4 w-full">
+              <Mail size={16} />
               {t.nav.cta}
             </a>
           </ul>
