@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="g" cx="80%" cy="18%" r="75%">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0.32" />
+      <stop offset="1" stop-color="#121110" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity="0.05" />
+    </pattern>
+  </defs>
+  <rect width="640" height="480" fill="#121110" />
+  <rect width="640" height="480" fill="url(#grid)" />
+  <rect width="640" height="480" fill="url(#g)" />
+
+  <!-- presentation board -->
+  <rect x="132" y="116" width="376" height="244" rx="14" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.2" />
+  <line x1="320" y1="360" x2="320" y2="398" stroke="#fff" stroke-opacity="0.2" stroke-width="3" />
+  <line x1="288" y1="398" x2="352" y2="398" stroke="#fff" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round" />
+
+  <!-- growth line + arrow -->
+  <polyline points="168,316 248,262 312,292 432,184" fill="none" stroke="#10b981" stroke-opacity="0.95" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M404 184 H432 V212" fill="none" stroke="#10b981" stroke-opacity="0.95" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="160" y1="332" x2="476" y2="332" stroke="#fff" stroke-opacity="0.14" />
+
+  <!-- lightbulb -->
+  <g transform="translate(296,40)" fill="none" stroke="#fff" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 2 a22 22 0 0 1 18 34 c-3 4 -5 7 -5 12 H11 c0 -5 -2 -8 -5 -12 A22 22 0 0 1 24 2 Z" />
+    <line x1="15" y1="56" x2="33" y2="56" />
+    <line x1="18" y1="64" x2="30" y2="64" />
+  </g>
+</svg>

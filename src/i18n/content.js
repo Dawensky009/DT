@@ -75,16 +75,19 @@ export const content = {
       items: [
         {
           no: '01',
+          image: '/services/risk.svg',
           name: 'Business Risk Analysis',
           desc: 'Identify, measure and mitigate the risks that threaten revenue and compliance — with clear reporting leaders can act on.',
         },
         {
           no: '02',
+          image: '/services/consulting.svg',
           name: 'Consulting & Training',
           desc: 'Advisory sessions and hands-on training that level up your team in analytics, data tooling and tech fundamentals.',
         },
         {
           no: '03',
+          image: '/services/web.svg',
           name: 'Website Creation',
           desc: 'Fast, modern, conversion-focused websites — like this one — designed and built to make your work look as good as it is.',
         },
@@ -327,16 +330,19 @@ export const content = {
       items: [
         {
           no: '01',
+          image: '/services/risk.svg',
           name: 'Analyse des risques',
           desc: 'Identifier, mesurer et atténuer les risques qui menacent le chiffre d’affaires et la conformité — avec des rapports clairs et exploitables.',
         },
         {
           no: '02',
+          image: '/services/consulting.svg',
           name: 'Conseil & formation',
           desc: 'Des sessions de conseil et des formations pratiques pour faire monter votre équipe en analytique, outils de données et fondamentaux tech.',
         },
         {
           no: '03',
+          image: '/services/web.svg',
           name: 'Création de sites web',
           desc: 'Des sites modernes, rapides et orientés conversion — comme celui-ci — conçus pour mettre votre travail en valeur.',
         },
