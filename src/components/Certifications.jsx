@@ -20,25 +20,20 @@ export default function Certifications() {
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {t.certifications.items.map((cert, i) => (
             <Reveal key={cert.name} delay={(i % 3) * 0.06}>
-              <div className="group relative flex h-full flex-col bg-paper p-7 transition-colors duration-300 hover:bg-canvas">
-                {/* stretched click target for the certificate PDF (no nested anchors) */}
-                {cert.file && (
-                  <a
-                    href={cert.file}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-cursor="link"
-                    aria-label={`${t.certifications.viewLabel} — ${cert.name}`}
-                    className="absolute inset-0 z-0"
-                  />
-                )}
-
+              <div className="group flex h-full flex-col bg-paper p-7 transition-colors duration-300 hover:bg-canvas">
                 <div className="flex min-h-[2.75rem] items-center justify-between">
                   <BrandLogos issuer={cert.issuer} />
                   {cert.file && (
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-paper">
+                    <a
+                      href={cert.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cursor="link"
+                      aria-label={`${t.certifications.viewLabel} — ${cert.name}`}
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:border-ink hover:bg-ink hover:text-paper group-hover:border-ink"
+                    >
                       <ArrowUpRight size={16} />
-                    </span>
+                    </a>
                   )}
                 </div>
 
@@ -57,8 +52,18 @@ export default function Certifications() {
                   ))}
                 </ul>
 
-                <div className="relative z-10 mt-5 flex items-center gap-4 text-sm font-medium">
-                  {cert.file && <span className="link-underline text-ink">{t.certifications.viewLabel}</span>}
+                <div className="mt-5 flex items-center gap-4 text-sm font-medium">
+                  {cert.file && (
+                    <a
+                      href={cert.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cursor="link"
+                      className="link-underline text-ink"
+                    >
+                      {t.certifications.viewLabel}
+                    </a>
+                  )}
                   {cert.verify && (
                     <a
                       href={cert.verify}

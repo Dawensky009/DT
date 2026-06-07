@@ -17,8 +17,8 @@ export default function Reveal({
       className={className}
       initial={{ opacity: 0, y, filter: blur ? 'blur(6px)' : 'blur(0px)' }}
       whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.75, delay, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </MotionTag>
