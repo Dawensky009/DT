@@ -1,4 +1,4 @@
-import { Download, Award, GraduationCap, Workflow } from 'lucide-react'
+import { Download, Award, GraduationCap, Target } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
 import Reveal from './Reveal.jsx'
@@ -6,7 +6,7 @@ import Reveal from './Reveal.jsx'
 const highlightIcon = {
   valedictorian: Award,
   dess: GraduationCap,
-  automation: Workflow,
+  detail: Target,
 }
 
 export default function About() {

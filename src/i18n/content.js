@@ -47,31 +47,31 @@ export const content = {
 
     about: {
       label: 'About me',
-      heading: 'Hands-on, always.',
+      heading: 'I build what works.',
       intro:
-        'As a Data & Risk Analyst, I don’t just analyze numbers — I turn operational complexity into tangible solutions. I’m a build-first person: to me, a solution only matters once it’s shipped, working, and creating real impact.',
+        'I am a Data & Risk Analyst who likes to build, not only to advise. I take complex, messy operations and turn them into solutions a business can rely on every day. What matters most to a company is simple. I help it protect its revenue and avoid losing money, by catching risk early and acting before small problems become expensive ones.',
       values: [
         {
-          title: 'Technical rigor as leverage',
-          text: 'My foundation is a Computer Science degree from UNITECH, where I had the honor of graduating top of my class. That rigor gave me a solid technical base — understanding systems in depth and seeing what really happens under the hood.',
+          title: 'A solid technical base',
+          text: 'My foundation is a degree in Computer Science from UNITECH, where I graduated at the top of my class. That background gave me real technical depth. I understand how systems work underneath, so I can see what is truly happening and fix the root cause, not only the symptom.',
         },
         {
           title: 'From idea to production',
-          text: 'That technical command extends to building applications and websites. I don’t just analyze data — I build the tools and platforms that carry it. A management interface, a live site or a custom web solution: I take a project from idea to production. Technology never limits me; I shape it to fit the business need.',
+          text: 'I do not stop at analysis. I also build the tools and platforms that carry the data, from a management interface to a full website or a custom web solution. I can take a project from a rough idea all the way to production. Technology does not limit me. I shape it to fit what the business truly needs.',
         },
         {
-          title: 'Automation in service of people',
-          text: 'I’m passionate about automation, particularly with n8n — because I can’t stand tedious tasks that drain human time without adding value. My goal is to remove the operational noise and free up space for strategic thinking and creativity. I refuse mediocrity: every automation I build aims for flawless, consistent, scalable quality.',
+          title: 'Detail and quality',
+          text: 'I am meticulous by nature, and I have little patience for repetitive tasks that eat up time without adding value, so I automate them. Removing that noise lets people focus on thinking and on the work that truly matters. I never settle for mediocre. Every solution I build is meant to be reliable, consistent, and ready to grow.',
         },
         {
-          title: 'Leadership built for growth',
-          text: 'Beyond the technical, my greatest reward is growing others. I don’t see leadership as top-down authority, but as an engine for growth. I love helping teammates level up, clear their own obstacles and reach new milestones. A good leader makes the team better — more autonomous, more capable.',
+          title: 'Leadership that grows people',
+          text: 'Outside of the technical side, what I enjoy most is helping other people grow. I see leadership as a way to lift a team, not to give orders from above. I like helping colleagues build their skills, get past their own blockers, and reach the next level. A good leader leaves the team stronger, more independent, and more capable than before.',
         },
       ],
       highlights: [
-        { k: 'valedictorian', label: 'Valedictorian', detail: 'Computer Science — UNITECH' },
+        { k: 'valedictorian', label: 'Valedictorian', detail: 'Computer Science, UNITECH' },
         { k: 'dess', label: 'DESS in progress', detail: 'Database Administration' },
-        { k: 'automation', label: 'Automation', detail: 'Workflows with n8n' },
+        { k: 'detail', label: 'Attention to detail', detail: 'Reliable, consistent quality' },
       ],
       languagesLabel: 'Languages',
       languages: [
@@ -319,29 +319,29 @@ export const content = {
       label: 'À propos',
       heading: 'Le concret avant tout.',
       intro:
-        'En tant que Data & Risk Analyst, je ne me contente pas d’analyser des chiffres : je transforme la complexité opérationnelle en solutions tangibles. Homme de terrain, focalisé sur le faire, je considère qu’une solution n’a de valeur que déployée, efficace et porteuse d’un impact réel.',
+        'Je suis un Data & Risk Analyst qui aime construire, pas seulement conseiller. Je prends des opérations complexes et désordonnées et j’en fais des solutions sur lesquelles une entreprise peut compter au quotidien. Ce qui compte le plus pour une entreprise est simple. Je l’aide à protéger ses revenus et à éviter de perdre de l’argent, en repérant le risque tôt et en agissant avant que de petits problèmes ne deviennent coûteux.',
       values: [
         {
-          title: 'La rigueur technique comme levier',
-          text: 'Mon socle, c’est une formation en sciences informatiques à l’UNITECH, où j’ai eu l’honneur de terminer lauréat de ma promotion. Cette exigence m’a donné une base technique solide : comprendre les systèmes en profondeur et voir ce qui se passe réellement « sous le capot ».',
+          title: 'Une base technique solide',
+          text: 'Ma base, c’est une formation en sciences informatiques à l’UNITECH, où j’ai terminé lauréat de ma promotion. Ce parcours m’a donné une vraie profondeur technique. Je comprends comment fonctionnent les systèmes en dessous, ce qui me permet de voir ce qui se passe vraiment et de corriger la cause profonde, pas seulement le symptôme.',
         },
         {
           title: 'De l’idée à la production',
-          text: 'Cette maîtrise s’étend au développement d’applications et de sites web. Je ne me contente pas d’analyser la donnée : je construis les outils et les plateformes qui la portent. Interface de gestion, site opérationnel ou solution web sur mesure — je porte un projet de l’idée à la mise en production. La technique ne me limite pas ; je la façonne pour répondre au besoin métier.',
+          text: 'Je ne m’arrête pas à l’analyse. Je construis aussi les outils et les plateformes qui portent la donnée, d’une interface de gestion à un site complet ou une solution web sur mesure. Je peux mener un projet d’une simple idée jusqu’à la mise en production. La technique ne me limite pas. Je la façonne pour répondre au vrai besoin du métier.',
         },
         {
-          title: 'L’automatisation au service de l’humain',
-          text: 'Je suis passionné par l’automatisation, notamment avec n8n — parce que je déteste les tâches fastidieuses qui consomment le temps humain sans créer de valeur. Mon objectif : éliminer le bruit opérationnel pour libérer de l’espace à la réflexion stratégique et à la créativité. Je refuse le médiocre : chaque automatisation que je conçois vise une qualité irréprochable, constante et évolutive.',
+          title: 'Le détail et la qualité',
+          text: 'Je suis quelqu’un de minutieux, et j’ai peu de patience pour les tâches répétitives qui consomment du temps sans rien apporter, alors je les automatise. Retirer ce bruit permet aux gens de se concentrer sur la réflexion et sur ce qui compte vraiment. Je ne me contente jamais du médiocre. Chaque solution que je construis se veut fiable, constante et prête à évoluer.',
         },
         {
-          title: 'Un leadership tourné vers la croissance',
-          text: 'Au-delà de la technique, ma plus grande satisfaction réside dans le développement des autres. Je ne vois pas le leadership comme une autorité descendante, mais comme un moteur de croissance. J’aime aider mes collaborateurs à monter en compétence, à lever leurs propres obstacles et à franchir des paliers. Un bon leader, c’est celui qui rend son équipe meilleure : plus autonome, plus performante.',
+          title: 'Un leadership qui fait grandir',
+          text: 'Outre la technique, ce que je préfère, c’est aider les autres à grandir. Je vois le leadership comme une façon de tirer une équipe vers le haut, pas de donner des ordres d’en haut. J’aime aider mes collègues à monter en compétence, à lever leurs propres blocages et à passer au niveau suivant. Un bon leader laisse son équipe plus forte, plus autonome et plus capable qu’avant.',
         },
       ],
       highlights: [
-        { k: 'valedictorian', label: 'Lauréat de promotion', detail: 'Sciences informatiques — UNITECH' },
+        { k: 'valedictorian', label: 'Lauréat de promotion', detail: 'Sciences informatiques, UNITECH' },
         { k: 'dess', label: 'DESS en cours', detail: 'Administration de bases de données' },
-        { k: 'automation', label: 'Automatisation', detail: 'Workflows avec n8n' },
+        { k: 'detail', label: 'Sens du détail', detail: 'Qualité fiable et constante' },
       ],
       languagesLabel: 'Langues',
       languages: [
