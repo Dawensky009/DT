@@ -219,6 +219,15 @@ export const content = {
         {
           category: 'web',
           year: '2026',
+          tag: 'Web App',
+          title: 'Herecheck — University Management',
+          desc: 'An academic management & attendance platform for a Haitian university — track student attendance and assiduity rates, and manage students, professors, courses, grades and reports.',
+          images: [{ src: '/projects/herecheck-1.jpg', webp: '/projects/herecheck-1.webp' }],
+          ready: true,
+        },
+        {
+          category: 'web',
+          year: '2026',
           tag: 'E-commerce',
           title: 'AlphaOmega — Premium Store',
           desc: 'A bold e-commerce storefront for a premium fashion collective — catalog, product pages and direct WhatsApp ordering, with a modern conversion-focused design.',
@@ -459,6 +468,15 @@ export const content = {
       soonGallery: 'Captures bientôt disponibles.',
       groups: { web: 'Web', data: 'Data & Analytique' },
       items: [
+        {
+          category: 'web',
+          year: '2026',
+          tag: 'Application web',
+          title: 'Herecheck — Gestion universitaire',
+          desc: 'Une plateforme de gestion académique et de présences pour une université haïtienne — suivi des présences et du taux d’assiduité des étudiants, et gestion des étudiants, professeurs, cours, notes et rapports.',
+          images: [{ src: '/projects/herecheck-1.jpg', webp: '/projects/herecheck-1.webp' }],
+          ready: true,
+        },
         {
           category: 'web',
           year: '2026',
