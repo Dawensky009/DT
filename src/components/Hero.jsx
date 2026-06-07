@@ -48,15 +48,18 @@ export default function Hero() {
         style={{ y: portraitY }}
         className="absolute inset-y-0 right-0 z-0 hidden lg:block lg:w-[48%]"
       >
-        <motion.img
-          src={profile.photo}
-          alt={t.hero.photoAlt}
-          initial={{ opacity: 0, scale: 1.06 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="h-full w-full object-cover object-top"
-          loading="eager"
-        />
+        <picture className="contents">
+          <source srcSet={profile.photoWebp} type="image/webp" />
+          <motion.img
+            src={profile.photo}
+            alt={t.hero.photoAlt}
+            initial={{ opacity: 0, scale: 1.06 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="h-full w-full object-cover object-top"
+            loading="eager"
+          />
+        </picture>
         <div
           className="pointer-events-none absolute inset-y-0 left-0 z-10 w-2/5 bg-gradient-to-r from-canvas via-canvas/60 to-transparent"
           aria-hidden="true"
@@ -111,12 +114,15 @@ export default function Hero() {
 
         {/* Mobile portrait — full color, in flow */}
         <motion.div variants={rise} initial="hidden" animate="show" custom={3} className="mt-10 overflow-hidden rounded-2xl lg:hidden">
-          <img
-            src={profile.photo}
-            alt={t.hero.photoAlt}
-            className="aspect-[5/4] w-full object-cover object-top"
-            loading="eager"
-          />
+          <picture className="contents">
+            <source srcSet={profile.photoWebp} type="image/webp" />
+            <img
+              src={profile.photo}
+              alt={t.hero.photoAlt}
+              className="aspect-[5/4] w-full object-cover object-top"
+              loading="eager"
+            />
+          </picture>
         </motion.div>
 
         {/* Mobile scroll-down */}

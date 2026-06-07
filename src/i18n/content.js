@@ -13,6 +13,7 @@ export const profile = {
   facebook: 'https://www.facebook.com/dawensky.thermildort',
   cv: '/cv-dawensky.pdf',
   photo: '/profile.jpg',
+  photoWebp: '/profile.webp',
   logo: '/logo.png',
 }
 
