@@ -210,11 +210,12 @@ export const content = {
       heading: 'Recent projects',
       intro: 'A selection spanning analytics, risk and the web. Detailed case studies are on the way.',
       soon: 'In progress',
+      visitLabel: 'Visit site',
       items: [
+        { year: '2026', tag: 'Web Creation', title: 'AlphaOmega — Premium Store', desc: 'A bold e-commerce storefront for a premium fashion collective — catalog, product pages and direct WhatsApp ordering.', url: 'https://alphaomegashopllc.com/', image: '/projects/alphaomega.jpg', imageWebp: '/projects/alphaomega.webp', ready: true },
         { year: '2021', tag: 'Database Design', title: 'Ministry Database System', desc: 'Designed and maintained databases supporting information management and decision-making.', ready: true },
         { year: '2024', tag: 'Business Intelligence', title: 'Risk & Revenue Dashboard', desc: 'Interactive Power BI dashboard surfacing revenue-assurance risks and KPIs at a glance.', ready: false },
         { year: '2024', tag: 'Data Engineering', title: 'PL/SQL Automation Scripts', desc: 'Automated data cleansing and consolidation pipelines with PL/SQL and Python (Pandas).', ready: false },
-        { year: '2025', tag: 'Web Creation', title: 'Client Portfolio Website', desc: 'A fast, conversion-focused marketing site built for a service business.', ready: false },
       ],
     },
 
@@ -435,11 +436,12 @@ export const content = {
       heading: 'Projets récents',
       intro: 'Une sélection entre analytique, risque et web. Les études de cas détaillées arrivent bientôt.',
       soon: 'En cours',
+      visitLabel: 'Voir le site',
       items: [
+        { year: '2026', tag: 'Création web', title: 'AlphaOmega — Boutique premium', desc: 'Une boutique e-commerce audacieuse pour un collectif de mode premium — catalogue, fiches produits et commande directe via WhatsApp.', url: 'https://alphaomegashopllc.com/', image: '/projects/alphaomega.jpg', imageWebp: '/projects/alphaomega.webp', ready: true },
         { year: '2021', tag: 'Conception BD', title: 'Système de bases de données ministériel', desc: 'Conception et maintenance de bases de données au service de la gestion de l’information et de la décision.', ready: true },
         { year: '2024', tag: 'Business Intelligence', title: 'Dashboard risques & revenus', desc: 'Tableau de bord Power BI interactif révélant d’un coup d’œil les risques d’assurance revenus et les KPI.', ready: false },
         { year: '2024', tag: 'Ingénierie data', title: 'Scripts d’automatisation PL/SQL', desc: 'Pipelines automatisés de nettoyage et consolidation de données en PL/SQL et Python (Pandas).', ready: false },
-        { year: '2025', tag: 'Création web', title: 'Site portfolio client', desc: 'Un site vitrine rapide et orienté conversion pour une entreprise de services.', ready: false },
       ],
     },
 
