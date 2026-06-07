@@ -1,8 +1,8 @@
-import { ShieldCheck, BarChart3, Database, Wrench } from 'lucide-react'
+import { ShieldCheck, BarChart3, Database, Sparkles, Cloud, Code2 } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import Reveal from './Reveal.jsx'
 
-const groupIcons = [ShieldCheck, BarChart3, Database, Wrench]
+const groupIcons = [ShieldCheck, BarChart3, Database, Sparkles, Cloud, Code2]
 
 export default function Expertise() {
   const { t } = useLang()
@@ -18,18 +18,19 @@ export default function Expertise() {
           <p className="max-w-sm text-base leading-relaxed text-muted">{t.expertise.intro}</p>
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {t.expertise.groups.map((group, i) => {
             const Icon = groupIcons[i % groupIcons.length]
             return (
-              <Reveal key={group.name} delay={(i % 2) * 0.08}>
-                <div className="h-full bg-paper p-7 sm:p-9">
+              <Reveal key={group.name} delay={(i % 3) * 0.08}>
+                <div className="flex h-full flex-col bg-paper p-7 sm:p-8">
                   <div className="flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-canvas text-ink">
                       <Icon size={20} />
                     </span>
                     <h3 className="text-lg font-medium text-ink">{group.name}</h3>
                   </div>
+                  {group.desc && <p className="mt-4 text-sm leading-relaxed text-muted">{group.desc}</p>}
                   <ul className="mt-5 flex flex-wrap gap-2">
                     {group.items.map((skill) => (
                       <li

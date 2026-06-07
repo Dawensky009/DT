@@ -112,15 +112,17 @@ export const content = {
     expertise: {
       label: 'Expertise',
       heading: 'Skills & capabilities',
-      intro: 'A toolkit spanning risk, business intelligence and data engineering.',
+      intro: 'A broad toolkit across risk, data, AI, cloud and the web. I work end to end, from the raw data to the system in production.',
       groups: [
-        { name: 'Risk & Compliance', items: ['Fraud prevention', 'Revenue assurance', 'Product validation', 'Compliance'] },
-        { name: 'Business Intelligence', items: ['Power BI', 'Excel dashboards', 'Strategic monitoring', 'Reporting'] },
-        { name: 'Data Management', items: ['Data cleansing', 'Consolidation', 'PL/SQL', 'Python (Pandas)', 'Automation'] },
-        { name: 'Tools & Tech', items: ['Oracle', 'MySQL', 'SQL Server', 'Azure Databricks'] },
+        { name: 'Risk & Compliance', desc: 'Protecting revenue and keeping operations compliant.', items: ['Fraud prevention', 'Revenue assurance', 'Product validation', 'Compliance', 'Reconciliation'] },
+        { name: 'Business Intelligence', desc: 'Turning raw data into clear, decision-ready dashboards.', items: ['Power BI', 'Excel dashboards', 'KPI tracking', 'Data visualization', 'Reporting'] },
+        { name: 'Data & Databases', desc: 'Cleaning, modeling and querying data at scale.', items: ['Data cleansing', 'PL/SQL', 'Python (Pandas)', 'Oracle', 'MySQL', 'SQL Server', 'Data modeling'] },
+        { name: 'AI & LLMs', desc: 'Putting large language models and generative AI to practical use.', items: ['Large Language Models', 'Generative AI', 'Prompt engineering', 'Microsoft Copilot', 'Machine learning', 'Responsible AI'] },
+        { name: 'Cloud', desc: 'Running and shipping data and apps in the cloud.', items: ['Microsoft Azure', 'Azure Databricks', 'Azure AI', 'Cloud databases', 'Deployment (Vercel)'] },
+        { name: 'Web Development', desc: 'Building fast, modern apps and sites end to end.', items: ['React', 'JavaScript', 'HTML & CSS', 'Tailwind CSS', 'PHP', 'Responsive design'] },
       ],
       topLabel: 'Top skills',
-      topSkills: ['Leadership', 'Financial Analysis', 'Business Requirements'],
+      topSkills: ['Leadership', 'Financial Analysis', 'Business Requirements', 'Attention to detail'],
     },
 
     experience: {
@@ -382,15 +384,17 @@ export const content = {
     expertise: {
       label: 'Expertise',
       heading: 'Compétences & savoir-faire',
-      intro: 'Une palette à cheval entre risque, business intelligence et ingénierie de la donnée.',
+      intro: 'Une palette large qui couvre le risque, la donnée, l’IA, le cloud et le web. Je travaille de bout en bout, de la donnée brute au système en production.',
       groups: [
-        { name: 'Risque & conformité', items: ['Prévention de la fraude', 'Assurance revenus', 'Validation produit', 'Conformité'] },
-        { name: 'Business Intelligence', items: ['Power BI', 'Tableaux de bord Excel', 'Suivi stratégique', 'Reporting'] },
-        { name: 'Gestion de données', items: ['Nettoyage de données', 'Consolidation', 'PL/SQL', 'Python (Pandas)', 'Automatisation'] },
-        { name: 'Outils & tech', items: ['Oracle', 'MySQL', 'SQL Server', 'Azure Databricks'] },
+        { name: 'Risque & conformité', desc: 'Protéger les revenus et garder des opérations conformes.', items: ['Prévention de la fraude', 'Assurance revenus', 'Validation produit', 'Conformité', 'Rapprochements'] },
+        { name: 'Business Intelligence', desc: 'Transformer la donnée brute en tableaux de bord prêts à décider.', items: ['Power BI', 'Tableaux de bord Excel', 'Suivi des KPI', 'Visualisation', 'Reporting'] },
+        { name: 'Données & bases de données', desc: 'Nettoyer, modéliser et interroger la donnée à grande échelle.', items: ['Nettoyage de données', 'PL/SQL', 'Python (Pandas)', 'Oracle', 'MySQL', 'SQL Server', 'Modélisation de données'] },
+        { name: 'IA & LLM', desc: 'Mettre les grands modèles de langage et l’IA générative au service du concret.', items: ['Grands modèles de langage', 'IA générative', 'Prompt engineering', 'Microsoft Copilot', 'Machine learning', 'IA responsable'] },
+        { name: 'Cloud', desc: 'Exécuter et déployer données et applications dans le cloud.', items: ['Microsoft Azure', 'Azure Databricks', 'Azure AI', 'Bases de données cloud', 'Déploiement (Vercel)'] },
+        { name: 'Développement web', desc: 'Construire des applications et sites modernes, de bout en bout.', items: ['React', 'JavaScript', 'HTML & CSS', 'Tailwind CSS', 'PHP', 'Design responsive'] },
       ],
       topLabel: 'Compétences clés',
-      topSkills: ['Leadership', 'Analyse financière', 'Expression des besoins'],
+      topSkills: ['Leadership', 'Analyse financière', 'Expression des besoins', 'Sens du détail'],
     },
 
     experience: {
