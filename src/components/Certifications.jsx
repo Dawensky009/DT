@@ -1,6 +1,7 @@
-import { Award, ArrowUpRight, BadgeCheck } from 'lucide-react'
+import { ArrowUpRight, BadgeCheck } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import Reveal from './Reveal.jsx'
+import BrandLogos from './BrandLogos.jsx'
 
 export default function Certifications() {
   const { t } = useLang()
@@ -32,10 +33,8 @@ export default function Certifications() {
                   />
                 )}
 
-                <div className="flex items-start justify-between">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-canvas text-ink">
-                    <Award size={20} />
-                  </span>
+                <div className="flex min-h-[2.75rem] items-center justify-between">
+                  <BrandLogos issuer={cert.issuer} />
                   {cert.file && (
                     <span className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-paper">
                       <ArrowUpRight size={16} />
