@@ -47,16 +47,31 @@ export const content = {
 
     about: {
       label: 'About me',
-      heading: 'Analyst by training, builder by instinct.',
-      paragraphs: [
-        'I’m an experienced Business Risk Analyst with a strong technical foundation in database management. At Digicel Group, I help secure revenue and sharpen decision-making through data — fraud prevention, revenue assurance and pre-launch product validation.',
-        'I graduated top of my class — Valedictorian in Computer Science (2016–2020) — and I’m currently pursuing a Specialized Graduate Diploma (DESS) in Database Administration. I also take part in AI workshops to stay at the edge of data and risk.',
-        'Beyond analytics, I design and build websites — bringing the same rigor and clarity to every project I take on.',
+      heading: 'Hands-on, always.',
+      intro:
+        'As a Data & Risk Analyst, I don’t just analyze numbers — I turn operational complexity into tangible solutions. I’m a build-first person: to me, a solution only matters once it’s shipped, working, and creating real impact.',
+      values: [
+        {
+          title: 'Technical rigor as leverage',
+          text: 'My foundation is a Computer Science degree from UNITECH, where I had the honor of graduating top of my class. That rigor gave me a solid technical base — understanding systems in depth and seeing what really happens under the hood.',
+        },
+        {
+          title: 'From idea to production',
+          text: 'That technical command extends to building applications and websites. I don’t just analyze data — I build the tools and platforms that carry it. A management interface, a live site or a custom web solution: I take a project from idea to production. Technology never limits me; I shape it to fit the business need.',
+        },
+        {
+          title: 'Automation in service of people',
+          text: 'I’m passionate about automation, particularly with n8n — because I can’t stand tedious tasks that drain human time without adding value. My goal is to remove the operational noise and free up space for strategic thinking and creativity. I refuse mediocrity: every automation I build aims for flawless, consistent, scalable quality.',
+        },
+        {
+          title: 'Leadership built for growth',
+          text: 'Beyond the technical, my greatest reward is growing others. I don’t see leadership as top-down authority, but as an engine for growth. I love helping teammates level up, clear their own obstacles and reach new milestones. A good leader makes the team better — more autonomous, more capable.',
+        },
       ],
       highlights: [
-        { k: 'valedictorian', label: 'Valedictorian', detail: 'Computer Science, 2016–2020' },
+        { k: 'valedictorian', label: 'Valedictorian', detail: 'Computer Science — UNITECH' },
         { k: 'dess', label: 'DESS in progress', detail: 'Database Administration' },
-        { k: 'ai', label: 'AI workshops', detail: 'Generative AI & risk' },
+        { k: 'automation', label: 'Automation', detail: 'Workflows with n8n' },
       ],
       languagesLabel: 'Languages',
       languages: [
@@ -302,16 +317,31 @@ export const content = {
 
     about: {
       label: 'À propos',
-      heading: 'Analyste de formation, bâtisseur d’instinct.',
-      paragraphs: [
-        'Je suis un analyste des risques expérimenté, doté d’un solide socle technique en gestion de bases de données. Chez Digicel Group, j’aide à sécuriser les revenus et à affiner la prise de décision grâce à la donnée — prévention de la fraude, assurance revenus et validation produit avant lancement.',
-        'J’ai été major de ma promotion en informatique (2016–2020) et je prépare actuellement un DESS en administration de bases de données. Je participe aussi à des workshops en intelligence artificielle pour rester à la pointe de la data et du risque.',
-        'Au-delà de l’analytique, je conçois et développe des sites web — avec la même rigueur et la même clarté sur chaque projet.',
+      heading: 'Le concret avant tout.',
+      intro:
+        'En tant que Data & Risk Analyst, je ne me contente pas d’analyser des chiffres : je transforme la complexité opérationnelle en solutions tangibles. Homme de terrain, focalisé sur le faire, je considère qu’une solution n’a de valeur que déployée, efficace et porteuse d’un impact réel.',
+      values: [
+        {
+          title: 'La rigueur technique comme levier',
+          text: 'Mon socle, c’est une formation en sciences informatiques à l’UNITECH, où j’ai eu l’honneur de terminer lauréat de ma promotion. Cette exigence m’a donné une base technique solide : comprendre les systèmes en profondeur et voir ce qui se passe réellement « sous le capot ».',
+        },
+        {
+          title: 'De l’idée à la production',
+          text: 'Cette maîtrise s’étend au développement d’applications et de sites web. Je ne me contente pas d’analyser la donnée : je construis les outils et les plateformes qui la portent. Interface de gestion, site opérationnel ou solution web sur mesure — je porte un projet de l’idée à la mise en production. La technique ne me limite pas ; je la façonne pour répondre au besoin métier.',
+        },
+        {
+          title: 'L’automatisation au service de l’humain',
+          text: 'Je suis passionné par l’automatisation, notamment avec n8n — parce que je déteste les tâches fastidieuses qui consomment le temps humain sans créer de valeur. Mon objectif : éliminer le bruit opérationnel pour libérer de l’espace à la réflexion stratégique et à la créativité. Je refuse le médiocre : chaque automatisation que je conçois vise une qualité irréprochable, constante et évolutive.',
+        },
+        {
+          title: 'Un leadership tourné vers la croissance',
+          text: 'Au-delà de la technique, ma plus grande satisfaction réside dans le développement des autres. Je ne vois pas le leadership comme une autorité descendante, mais comme un moteur de croissance. J’aime aider mes collaborateurs à monter en compétence, à lever leurs propres obstacles et à franchir des paliers. Un bon leader, c’est celui qui rend son équipe meilleure : plus autonome, plus performante.',
+        },
       ],
       highlights: [
-        { k: 'valedictorian', label: 'Major de promotion', detail: 'Informatique, 2016–2020' },
+        { k: 'valedictorian', label: 'Lauréat de promotion', detail: 'Sciences informatiques — UNITECH' },
         { k: 'dess', label: 'DESS en cours', detail: 'Administration de bases de données' },
-        { k: 'ai', label: 'Workshops IA', detail: 'IA générative & risque' },
+        { k: 'automation', label: 'Automatisation', detail: 'Workflows avec n8n' },
       ],
       languagesLabel: 'Langues',
       languages: [

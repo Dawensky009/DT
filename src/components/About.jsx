@@ -1,4 +1,4 @@
-import { Download, Award, GraduationCap, Sparkles } from 'lucide-react'
+import { Download, Award, GraduationCap, Workflow } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
 import Reveal from './Reveal.jsx'
@@ -6,7 +6,7 @@ import Reveal from './Reveal.jsx'
 const highlightIcon = {
   valedictorian: Award,
   dess: GraduationCap,
-  ai: Sparkles,
+  automation: Workflow,
 }
 
 export default function About() {
@@ -19,22 +19,32 @@ export default function About() {
           <span className="eyebrow">{t.about.label}</span>
         </Reveal>
 
-        <div className="mt-8 grid gap-x-20 gap-y-10 lg:grid-cols-[1fr_1fr]">
+        {/* heading + intro */}
+        <div className="mt-8 grid gap-x-20 gap-y-8 lg:grid-cols-[1fr_1fr]">
           <Reveal>
             <h2 className="text-4xl leading-[1.1] sm:text-5xl">{t.about.heading}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="space-y-5 text-lg leading-relaxed text-muted">
-              {t.about.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
+            <p className="text-lg leading-relaxed text-muted">{t.about.intro}</p>
           </Reveal>
+        </div>
+
+        {/* value blocks */}
+        <div className="mt-16 grid gap-x-16 gap-y-12 border-t border-line pt-14 md:grid-cols-2">
+          {t.about.values.map((v, i) => (
+            <Reveal key={v.title} delay={(i % 2) * 0.08}>
+              <div className="flex items-baseline gap-4">
+                <span className="font-display text-sm text-muted">0{i + 1}</span>
+                <h3 className="font-display text-2xl text-ink">{v.title}</h3>
+              </div>
+              <p className="mt-4 pl-8 text-[15px] leading-relaxed text-muted">{v.text}</p>
+            </Reveal>
+          ))}
         </div>
 
         {/* highlights */}
         <Reveal delay={0.05}>
-          <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
+          <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
             {t.about.highlights.map((h) => {
               const Icon = highlightIcon[h.k] ?? Award
               return (
