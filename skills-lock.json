@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "cv-creator": {
+      "source": "erichowens/some_claude_skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/cv-creator/SKILL.md",
+      "computedHash": "4dfb869542a478b6e413a4b96024d9c5626096b8bee1df033fe13a20a9a5180e"
+    }
+  }
+}
