@@ -49,23 +49,23 @@ export const content = {
       label: 'About me',
       heading: 'I build what works.',
       intro:
-        'I am a Data & Risk Analyst who likes to build, not only to advise. I take complex, messy operations and turn them into solutions a business can rely on every day. What matters most to a company is simple. I help it protect its revenue and avoid losing money, by catching risk early and acting before small problems become expensive ones.',
+        'I am a Business Risk and Data Analyst who protects revenue and builds the tools that keep it safe. I work close to the operations, I find where money quietly slips away, and I fix it before it turns into a real loss. I care about the concrete. A solution only counts once it is live, reliable, and making a difference.',
       values: [
         {
-          title: 'A solid technical base',
-          text: 'My foundation is a degree in Computer Science from UNITECH, where I graduated at the top of my class. That background gave me real technical depth. I understand how systems work underneath, so I can see what is truly happening and fix the root cause, not only the symptom.',
+          title: 'A real technical base',
+          text: 'I studied Computer Science at UNITECH and graduated at the top of my class. That foundation lets me understand systems from the inside, so I can trace a problem to its real source instead of guessing. Depth is what lets me move fast without breaking things.',
         },
         {
-          title: 'From idea to production',
-          text: 'I do not stop at analysis. I also build the tools and platforms that carry the data, from a management interface to a full website or a custom web solution. I can take a project from a rough idea all the way to production. Technology does not limit me. I shape it to fit what the business truly needs.',
+          title: 'From idea to live product',
+          text: 'I do not stop at the analysis. I build the dashboards, the scripts, and the full web applications that turn insight into something people actually use. I have carried projects from a blank page to production, and I shape the technology around the business goal, never the other way around.',
         },
         {
-          title: 'Detail and quality',
-          text: 'I am meticulous by nature, and I have little patience for repetitive tasks that eat up time without adding value, so I automate them. Removing that noise lets people focus on thinking and on the work that truly matters. I never settle for mediocre. Every solution I build is meant to be reliable, consistent, and ready to grow.',
+          title: 'Meticulous by default',
+          text: 'I pay attention to the small things, because in risk and revenue the small things are where the money hides. I automate the repetitive work so people can focus on what matters, and I hold every piece I build to a high bar. Reliable, consistent, and ready to scale is the only standard I accept.',
         },
         {
-          title: 'Leadership that grows people',
-          text: 'Outside of the technical side, what I enjoy most is helping other people grow. I see leadership as a way to lift a team, not to give orders from above. I like helping colleagues build their skills, get past their own blockers, and reach the next level. A good leader leaves the team stronger, more independent, and more capable than before.',
+          title: 'Leadership that lifts the team',
+          text: 'What I enjoy most is helping other people grow. I lead by removing blockers and raising the level around me, not by giving orders. A team I work with should come out stronger, more independent, and more confident than before.',
         },
       ],
       highlights: [
@@ -323,23 +323,23 @@ export const content = {
       label: 'À propos',
       heading: 'Le concret avant tout.',
       intro:
-        'Je suis un Data & Risk Analyst qui aime construire, pas seulement conseiller. Je prends des opérations complexes et désordonnées et j’en fais des solutions sur lesquelles une entreprise peut compter au quotidien. Ce qui compte le plus pour une entreprise est simple. Je l’aide à protéger ses revenus et à éviter de perdre de l’argent, en repérant le risque tôt et en agissant avant que de petits problèmes ne deviennent coûteux.',
+        'Je suis analyste des risques et des données. Je protège les revenus et je construis les outils qui les gardent en sécurité. Je travaille au plus près des opérations, je repère là où l’argent s’échappe en silence, et je corrige avant que ça ne devienne une vraie perte. Ce qui m’intéresse, c’est le concret. Une solution ne compte que lorsqu’elle est en production, fiable, et qu’elle change vraiment quelque chose.',
       values: [
         {
-          title: 'Une base technique solide',
-          text: 'Ma base, c’est une formation en sciences informatiques à l’UNITECH, où j’ai terminé lauréat de ma promotion. Ce parcours m’a donné une vraie profondeur technique. Je comprends comment fonctionnent les systèmes en dessous, ce qui me permet de voir ce qui se passe vraiment et de corriger la cause profonde, pas seulement le symptôme.',
+          title: 'Une vraie base technique',
+          text: 'J’ai étudié l’informatique à l’UNITECH et j’ai terminé lauréat de ma promotion. Cette base me permet de comprendre les systèmes de l’intérieur, donc de remonter un problème jusqu’à sa source réelle au lieu de deviner. C’est cette profondeur qui me permet d’avancer vite sans tout casser.',
         },
         {
-          title: 'De l’idée à la production',
-          text: 'Je ne m’arrête pas à l’analyse. Je construis aussi les outils et les plateformes qui portent la donnée, d’une interface de gestion à un site complet ou une solution web sur mesure. Je peux mener un projet d’une simple idée jusqu’à la mise en production. La technique ne me limite pas. Je la façonne pour répondre au vrai besoin du métier.',
+          title: 'De l’idée au produit en ligne',
+          text: 'Je ne m’arrête pas à l’analyse. Je construis les tableaux de bord, les scripts et les applications web qui transforment l’insight en quelque chose que les gens utilisent vraiment. J’ai mené des projets de la page blanche jusqu’à la production, et je façonne la technologie autour de l’objectif métier, jamais l’inverse.',
         },
         {
-          title: 'Le détail et la qualité',
-          text: 'Je suis quelqu’un de minutieux, et j’ai peu de patience pour les tâches répétitives qui consomment du temps sans rien apporter, alors je les automatise. Retirer ce bruit permet aux gens de se concentrer sur la réflexion et sur ce qui compte vraiment. Je ne me contente jamais du médiocre. Chaque solution que je construis se veut fiable, constante et prête à évoluer.',
+          title: 'Minutieux par défaut',
+          text: 'Je fais attention aux détails, parce qu’en risque et en revenus, c’est dans les détails que se cache l’argent. J’automatise les tâches répétitives pour que les gens se concentrent sur l’essentiel, et je place la barre haut sur tout ce que je construis. Fiable, constant et prêt à monter en charge, c’est le seul niveau que j’accepte.',
         },
         {
-          title: 'Un leadership qui fait grandir',
-          text: 'Outre la technique, ce que je préfère, c’est aider les autres à grandir. Je vois le leadership comme une façon de tirer une équipe vers le haut, pas de donner des ordres d’en haut. J’aime aider mes collègues à monter en compétence, à lever leurs propres blocages et à passer au niveau suivant. Un bon leader laisse son équipe plus forte, plus autonome et plus capable qu’avant.',
+          title: 'Un leadership qui élève l’équipe',
+          text: 'Ce que je préfère, c’est aider les autres à grandir. Je dirige en levant les blocages et en tirant le niveau vers le haut, pas en donnant des ordres. Une équipe avec qui je travaille doit en ressortir plus forte, plus autonome et plus sûre d’elle qu’avant.',
         },
       ],
       highlights: [
