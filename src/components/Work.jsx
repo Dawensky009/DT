@@ -9,8 +9,8 @@ export default function Work() {
   const [active, setActive] = useState(null)
 
   const groups = [
-    { key: 'web', title: t.work.groups.web, items: t.work.items.filter((p) => p.category === 'web') },
-    { key: 'data', title: t.work.groups.data, items: t.work.items.filter((p) => p.category === 'data') },
+    { key: 'web', title: t.work.groups.web, items: t.work.items.filter((p) => p.category === 'web' && !p.hidden) },
+    { key: 'data', title: t.work.groups.data, items: t.work.items.filter((p) => p.category === 'data' && !p.hidden) },
   ].filter((g) => g.items.length > 0)
 
   return (
