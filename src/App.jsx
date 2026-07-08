@@ -3,7 +3,7 @@ import ScrollProgress from './components/ScrollProgress.jsx'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
-import Services from './components/Services.jsx'
+// import Services from './components/Services.jsx' // hidden for now — re-enable when ready
 import Expertise from './components/Expertise.jsx'
 import Experience from './components/Experience.jsx'
 import Education from './components/Education.jsx'
@@ -27,7 +27,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Services />
+        {/* <Services /> hidden for now — re-enable when ready */}
         <Expertise />
         <Experience />
         <Education />

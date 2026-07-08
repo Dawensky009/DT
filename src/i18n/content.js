@@ -22,7 +22,6 @@ export const content = {
     nav: {
       links: [
         { id: 'about', label: 'About' },
-        { id: 'services', label: 'Services' },
         { id: 'expertise', label: 'Expertise' },
         { id: 'experience', label: 'Experience' },
         { id: 'certifications', label: 'Certifications' },
@@ -297,7 +296,6 @@ export const content = {
     nav: {
       links: [
         { id: 'about', label: 'À propos' },
-        { id: 'services', label: 'Services' },
         { id: 'expertise', label: 'Expertise' },
         { id: 'experience', label: 'Expérience' },
         { id: 'certifications', label: 'Certifications' },
