@@ -113,7 +113,7 @@ export const content = {
       heading: 'Skills & capabilities',
       intro: 'A broad toolkit across risk, data, AI, cloud and the web. I work end to end, from the raw data to the system in production.',
       groups: [
-        { name: 'Risk & Compliance', desc: 'Protecting revenue and keeping operations compliant.', items: ['Revenue assurance', 'Fraud investigation', 'Mobile money (MonCash)', 'UAT', 'Product validation', 'Compliance', 'Reconciliation'] },
+        { name: 'Risk & Compliance', desc: 'Protecting revenue and keeping operations compliant.', items: ['Revenue assurance', 'Financial fraud investigation', 'Mobile money (MonCash)', 'Telecom fraud', 'Reconciliation', 'UAT', 'Product validation', 'Compliance'] },
         { name: 'Business Intelligence', desc: 'Turning raw data into clear, decision-ready dashboards.', items: ['Power BI', 'Excel dashboards', 'KPI tracking', 'Data visualization', 'Reporting'] },
         { name: 'Data & Databases', desc: 'Cleaning, modeling and querying data at scale.', items: ['Data cleansing', 'PL/SQL', 'Python (Pandas)', 'Oracle', 'MySQL', 'SQL Server', 'Data modeling'] },
         { name: 'AI & LLMs', desc: 'Putting large language models and generative AI to practical use.', items: ['Large Language Models', 'Generative AI', 'Prompt engineering', 'Microsoft Copilot', 'Machine learning', 'Responsible AI'] },
@@ -135,7 +135,7 @@ export const content = {
           location: 'Port-au-Prince',
           bullets: [
             'Act as the final gatekeeper for direct revenue operations, auditing the billing lifecycle end to end across local and international voice, SMS and data to guarantee accuracy and prevent revenue leakage.',
-            'Lead thorough fraud investigations across the MonCash mobile money ecosystem and validate critical B2B corporate payroll disbursements.',
+            'Lead financial fraud investigations across both the MonCash mobile money ecosystem and core telecom services, and validate critical B2B corporate payroll disbursements.',
             'Reconcile complex data between local servers and cloud infrastructure, running rigorous completeness checks to guarantee zero data loss.',
             'Monitor reconciliations for recharges and plan activations end to end, watching for missing data, mismatches, failed transactions and automatic rollbacks, so customers are always treated fairly and Digicel keeps its revenue safe.',
             'Lead User Acceptance Testing (UAT) from a risk perspective during major system deployments, catching logic flaws and vulnerabilities before commercial launch.',
@@ -387,7 +387,7 @@ export const content = {
       heading: 'Compétences & savoir-faire',
       intro: 'Une palette large qui couvre le risque, la donnée, l’IA, le cloud et le web. Je travaille de bout en bout, de la donnée brute au système en production.',
       groups: [
-        { name: 'Risque & conformité', desc: 'Protéger les revenus et garder des opérations conformes.', items: ['Assurance revenus', 'Enquête de fraude', 'Mobile money (MonCash)', 'UAT', 'Validation produit', 'Conformité', 'Rapprochements'] },
+        { name: 'Risque & conformité', desc: 'Protéger les revenus et garder des opérations conformes.', items: ['Assurance revenus', 'Enquête de fraude financière', 'Mobile money (MonCash)', 'Fraude télécom', 'Rapprochements', 'UAT', 'Validation produit', 'Conformité'] },
         { name: 'Business Intelligence', desc: 'Transformer la donnée brute en tableaux de bord prêts à décider.', items: ['Power BI', 'Tableaux de bord Excel', 'Suivi des KPI', 'Visualisation', 'Reporting'] },
         { name: 'Données & bases de données', desc: 'Nettoyer, modéliser et interroger la donnée à grande échelle.', items: ['Nettoyage de données', 'PL/SQL', 'Python (Pandas)', 'Oracle', 'MySQL', 'SQL Server', 'Modélisation de données'] },
         { name: 'IA & LLM', desc: 'Mettre les grands modèles de langage et l’IA générative au service du concret.', items: ['Grands modèles de langage', 'IA générative', 'Prompt engineering', 'Microsoft Copilot', 'Machine learning', 'IA responsable'] },
@@ -409,7 +409,7 @@ export const content = {
           location: 'Port-au-Prince',
           bullets: [
             'Agir comme dernier rempart des opérations à revenu direct, en auditant tout le cycle de facturation, de la voix locale et internationale au SMS et à la data, pour garantir l’exactitude et éviter les pertes de revenus.',
-            'Mener des enquêtes de fraude approfondies dans l’écosystème de mobile money MonCash et valider des décaissements de paie B2B critiques.',
+            'Mener des enquêtes de fraude financière à la fois dans l’écosystème de mobile money MonCash et dans les services télécom, et valider des décaissements de paie B2B critiques.',
             'Réconcilier des données complexes entre les serveurs locaux et l’infrastructure cloud, avec des contrôles d’exhaustivité rigoureux pour garantir zéro perte de donnée.',
             'Surveiller les réconciliations des recharges et des activations de plans de bout en bout, en traquant les données manquantes, les écarts, les transactions échouées et les rollbacks automatiques, pour que le client ne subisse aucune injustice et que Digicel sécurise ses revenus.',
             'Piloter les tests d’acceptation (UAT) sous l’angle du risque lors des déploiements majeurs, en détectant les anomalies de logique et les vulnérabilités avant la mise en production.',
