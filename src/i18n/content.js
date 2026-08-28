@@ -5,9 +5,9 @@
 export const profile = {
   name: 'Dawensky Thermildort',
   initials: 'DT',
-  email: 'dawenskydaky98@gmail.com',
-  phone: '+50937007978',
-  phoneDisplay: '+509 3700 7978',
+  email: 'thermildortdawensky@gmail.com',
+  phone: '+50939306285',
+  phoneDisplay: '+509 3930 6285',
   whatsapp: 'https://wa.me/50939306285',
   linkedin: 'https://www.linkedin.com/in/dawenskythermildort',
   facebook: 'https://www.facebook.com/dawensky.thermildort',
