@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ArrowUpRight } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
@@ -6,15 +6,50 @@ import { useLang } from '../i18n/LanguageContext.jsx'
 // Popup that shows a project's screenshots + a "Visit site" link.
 export default function ProjectModal({ project, onClose }) {
   const { t } = useLang()
+  const closeRef = useRef(null)
+  const dialogRef = useRef(null)
+  const restoreFocusRef = useRef(null)
 
   useEffect(() => {
     if (!project) return
-    const onKey = (e) => e.key === 'Escape' && onClose()
+
+    // On mémorise l'élément qui avait le focus pour le lui rendre à la fermeture.
+    restoreFocusRef.current = document.activeElement
+    closeRef.current?.focus()
+
+    const focusables = () =>
+      Array.from(
+        dialogRef.current?.querySelectorAll(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      )
+
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        onClose()
+        return
+      }
+      // Piège de focus : tant que la popup est ouverte, la tabulation y reste.
+      if (e.key !== 'Tab') return
+      const items = focusables()
+      if (items.length === 0) return
+      const first = items[0]
+      const last = items[items.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
+      restoreFocusRef.current?.focus?.()
     }
   }, [project, onClose])
 
@@ -30,6 +65,10 @@ export default function ProjectModal({ project, onClose }) {
           data-cursor="hide"
         >
           <motion.div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-modal-title"
             className="relative my-auto w-full max-w-3xl overflow-hidden rounded-2xl bg-paper shadow-2xl"
             initial={{ opacity: 0, scale: 0.97, y: 18 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -45,9 +84,12 @@ export default function ProjectModal({ project, onClose }) {
                   <span>·</span>
                   <span>{project.ready ? project.year : t.work.soon}</span>
                 </div>
-                <h3 className="mt-2 font-display text-2xl text-ink sm:text-3xl">{project.title}</h3>
+                <h3 id="project-modal-title" className="mt-2 font-display text-2xl text-ink sm:text-3xl">
+                  {project.title}
+                </h3>
               </div>
               <button
+                ref={closeRef}
                 type="button"
                 onClick={onClose}
                 aria-label={t.work.closeLabel}
@@ -82,8 +124,11 @@ export default function ProjectModal({ project, onClose }) {
                       <source srcSet={img.webp} type="image/webp" />
                       <img
                         src={img.src}
-                        alt={`${project.title} — ${i + 1}`}
+                        alt={`${project.title} — ${t.work.screenshot} ${i + 1}`}
+                        width={img.width}
+                        height={img.height}
                         loading="lazy"
+                        decoding="async"
                         className="w-full rounded-xl border border-line"
                       />
                     </picture>
