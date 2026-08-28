@@ -57,7 +57,10 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             className="h-full w-full object-cover object-top"
+            width={1222}
+            height={1400}
             loading="eager"
+            fetchpriority="high"
           />
         </picture>
         <div
@@ -100,6 +103,10 @@ export default function Hero() {
             className="font-display text-[27vw] font-medium leading-[0.85] tracking-tight sm:text-[20vw] lg:text-[15rem] xl:text-[17rem]"
           >
             {t.hero.hello}
+            {/* Le h1 visible ne dit que "Hello" : on lui rattache l'identité
+                réelle pour les moteurs et les lecteurs d'écran, sans toucher
+                à la mise en page (sr-only est retiré du flux). */}
+            <span className="sr-only"> — {t.seo.h1}</span>
           </motion.h1>
           <motion.p
             variants={rise}
@@ -120,6 +127,8 @@ export default function Hero() {
               src={profile.photo}
               alt={t.hero.photoAlt}
               className="aspect-[5/4] w-full object-cover object-top"
+              width={1222}
+              height={1400}
               loading="eager"
             />
           </picture>

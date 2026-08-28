@@ -2,40 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary meta -->
-    <title>Dawensky Thermildort — Business Risk &amp; Data Analyst</title>
-    <meta
-      name="description"
-      content="Dawensky Thermildort — Business Risk Analyst & Data Analyst with a Computer Science background. Risk analysis, consulting & training, and custom website creation that turns data into decisions."
-    />
-    <meta name="author" content="Dawensky Thermildort" />
-    <meta name="theme-color" content="#2563EB" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Dawensky Thermildort — Business Risk & Data Analyst" />
-    <meta
-      property="og:description"
-      content="Turning data and risk into clear business decisions. Risk analysis, consulting & training, and custom website creation."
-    />
-    <meta property="og:image" content="/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="/og-image.jpg" />
-
-    <!-- Font: General Sans (free neo-grotesk, Aeonik alternative) via Fontshare -->
+    <!-- seo:start -->
+    <!--
+      Bloc remplacé au build par scripts/prerender.mjs, qui écrit le <head>
+      complet de chaque langue (title, description, canonical, hreflang, Open
+      Graph, JSON-LD) à partir de src/i18n/content.js et src/seo/.
+      Ce qui suit ne sert qu'au serveur de dev.
+    -->
+    <title>Dawensky Thermildort</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#1A1A1A" />
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
     <link
-      href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
       rel="stylesheet"
     />
+    <!-- seo:end -->
+
+    <!--
+      Le HTML pré-rendu porte les styles initiaux de Framer Motion
+      (opacity: 0). Sans JavaScript, rien ne viendrait les lever : ce bloc
+      rend le contenu visible pour les visiteurs et robots sans JS.
+    -->
+    <noscript>
+      <style>
+        [style*="opacity:0"],
+        [style*="opacity: 0"] {
+          opacity: 1 !important;
+          transform: none !important;
+          filter: none !important;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

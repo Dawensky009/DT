@@ -2,9 +2,38 @@ import { useEffect, useState } from 'react'
 import { Menu, X, Mail } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { profile } from '../i18n/content.js'
+import { LOCALES } from '../seo/site.js'
+
+// Les langues vivent maintenant sur des URLs distinctes (/en/ et /fr/) : le
+// sélecteur doit donc être fait de vrais liens, pour que les robots suivent le
+// chemin d'une version à l'autre. Le onClick ne sert qu'à conserver l'ancre en
+// cours pour le visiteur.
+function LangLinks({ linkClass }) {
+  const { lang, setLang, hrefFor, t } = useLang()
+  return (
+    <>
+      {LOCALES.map((l) => (
+        <a
+          key={l}
+          href={hrefFor(l)}
+          hrefLang={l}
+          onClick={(e) => {
+            e.preventDefault()
+            setLang(l)
+          }}
+          aria-current={l === lang ? 'true' : undefined}
+          aria-label={l === lang ? undefined : t.nav.langSwitch}
+          className={linkClass(l === lang)}
+        >
+          {l.toUpperCase()}
+        </a>
+      ))}
+    </>
+  )
+}
 
 export default function Nav() {
-  const { t, lang, setLang } = useLang()
+  const { t } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -32,7 +61,13 @@ export default function Nav() {
     >
       <nav className="container-page flex h-16 items-center justify-between sm:h-20">
         <a href="#top" onClick={close} className="flex items-center" aria-label={profile.name}>
-          <img src={profile.logo} alt={profile.name} className="h-11 w-auto object-contain sm:h-14" />
+          <img
+            src={profile.logo}
+            alt={profile.name}
+            width={298}
+            height={198}
+            className="h-11 w-auto object-contain sm:h-14"
+          />
         </a>
 
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex">
@@ -48,22 +83,16 @@ export default function Nav() {
         <div className="flex items-center gap-5">
           <div
             className="hidden items-center gap-1 rounded-full border border-line bg-paper/80 px-1 py-1 text-sm font-semibold shadow-sm backdrop-blur sm:flex"
-            aria-label={t.nav.langSwitch}
+            role="group"
+            aria-label={t.nav.langLabel}
           >
-            <button
-              type="button"
-              onClick={() => setLang('en')}
-              className={`cursor-pointer rounded-full px-2.5 py-0.5 transition-colors ${lang === 'en' ? 'bg-ink text-paper' : 'text-muted hover:text-ink'}`}
-            >
-              EN
-            </button>
-            <button
-              type="button"
-              onClick={() => setLang('fr')}
-              className={`cursor-pointer rounded-full px-2.5 py-0.5 transition-colors ${lang === 'fr' ? 'bg-ink text-paper' : 'text-muted hover:text-ink'}`}
-            >
-              FR
-            </button>
+            <LangLinks
+              linkClass={(active) =>
+                `cursor-pointer rounded-full px-2.5 py-0.5 transition-colors ${
+                  active ? 'bg-ink text-paper' : 'text-muted hover:text-ink'
+                }`
+              }
+            />
           </div>
 
           <a
@@ -101,27 +130,20 @@ export default function Nav() {
                 </a>
               </li>
             ))}
-            <li className="mt-2 flex items-center gap-3 border-t border-line pt-4 text-sm font-medium">
-              <button
-                type="button"
-                onClick={() => setLang('en')}
-                className={`cursor-pointer ${lang === 'en' ? 'text-ink' : 'text-muted'}`}
-              >
-                EN
-              </button>
-              <span className="text-muted/40">/</span>
-              <button
-                type="button"
-                onClick={() => setLang('fr')}
-                className={`cursor-pointer ${lang === 'fr' ? 'text-ink' : 'text-muted'}`}
-              >
-                FR
-              </button>
+            <li
+              className="mt-2 flex items-center gap-3 border-t border-line pt-4 text-sm font-medium"
+              role="group"
+              aria-label={t.nav.langLabel}
+            >
+              <LangLinks linkClass={(active) => `cursor-pointer ${active ? 'text-ink' : 'text-muted'}`} />
             </li>
-            <a href={`mailto:${profile.email}`} onClick={close} className="btn-dark mt-4 w-full">
-              <Mail size={16} />
-              {t.nav.cta}
-            </a>
+            {/* un <ul> n'accepte que des <li> comme enfants directs */}
+            <li className="mt-4">
+              <a href={`mailto:${profile.email}`} onClick={close} className="btn-dark w-full">
+                <Mail size={16} />
+                {t.nav.cta}
+              </a>
+            </li>
           </ul>
         </div>
       )}

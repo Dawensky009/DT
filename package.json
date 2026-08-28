@@ -6,7 +6,9 @@
   "description": "Portfolio of Dawensky Thermildort — Business Risk Analyst & Data Analyst",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr",
+    "build": "npm run build:client && npm run build:ssr && node scripts/prerender.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

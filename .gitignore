@@ -40,3 +40,6 @@ Ressources/
 # python caches from skill scripts
 __pycache__/
 *.pyc
+
+# build SSR intermédiaire (prérendu)
+dist-ssr/

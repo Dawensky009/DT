@@ -1,0 +1,14 @@
+{
+  "name": "Dawensky Thermildort — Business Risk & Data Analyst",
+  "short_name": "Dawensky T.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F8F8F8",
+  "theme_color": "#1A1A1A",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+  ]
+}

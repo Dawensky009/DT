@@ -19,6 +19,20 @@ export const profile = {
 
 export const content = {
   en: {
+    seo: {
+      title: 'Dawensky Thermildort — Business Risk & Data Analyst',
+      description:
+        'Business Risk & Data Analyst at Digicel Group. Revenue assurance, fraud investigation, Power BI dashboards and SQL automation — plus custom web development.',
+      ogTitle: 'Dawensky Thermildort — Business Risk & Data Analyst',
+      ogDescription:
+        'Turning data and risk into clear business decisions — revenue assurance, fraud investigation, BI dashboards and web development.',
+      ogImageAlt: 'Dawensky Thermildort, Business Risk & Data Analyst',
+      jobTitle: 'Business Risk & Data Analyst',
+      author: 'Dawensky Thermildort',
+      // Prolonge le <h1> visible ("Hello") pour les moteurs et lecteurs d'écran.
+      h1: 'Dawensky Thermildort, Business Risk & Data Analyst',
+    },
+
     nav: {
       links: [
         { id: 'about', label: 'About' },
@@ -30,6 +44,8 @@ export const content = {
       menuOpen: 'Open menu',
       menuClose: 'Close menu',
       langSwitch: 'Switch to French',
+      langLabel: 'Language',
+      skip: 'Skip to content',
     },
 
     hero: {
@@ -74,9 +90,9 @@ export const content = {
       ],
       languagesLabel: 'Languages',
       languages: [
-        { name: 'French', level: 'Native' },
-        { name: 'Haitian Creole', level: 'Native' },
-        { name: 'English', level: 'Professional' },
+        { name: 'French', level: 'Native', code: 'fr' },
+        { name: 'Haitian Creole', level: 'Native', code: 'ht' },
+        { name: 'English', level: 'Professional', code: 'en' },
       ],
       cvCta: 'Download my CV',
       photoAlt: 'Dawensky Thermildort',
@@ -236,6 +252,7 @@ export const content = {
       viewLabel: 'View project',
       closeLabel: 'Close',
       soonGallery: 'Screenshots coming soon.',
+      screenshot: 'screenshot',
       groups: { web: 'Web', data: 'Data & Analytics' },
       items: [
         {
@@ -244,7 +261,7 @@ export const content = {
           tag: 'Web App',
           title: 'Herecheck — University Management',
           desc: 'An academic management & attendance platform for a Haitian university — track student attendance and assiduity rates, and manage students, professors, courses, grades and reports.',
-          images: [{ src: '/projects/herecheck-1.jpg', webp: '/projects/herecheck-1.webp' }],
+          images: [{ src: '/projects/herecheck-1.jpg', webp: '/projects/herecheck-1.webp', width: 1200, height: 676 }],
           ready: true,
         },
         {
@@ -255,9 +272,9 @@ export const content = {
           desc: 'A bold e-commerce storefront for a premium fashion collective — catalog, product pages and direct WhatsApp ordering, with a modern conversion-focused design.',
           url: 'https://alphaomegashopllc.com/',
           images: [
-            { src: '/projects/alphaomega-1.jpg', webp: '/projects/alphaomega-1.webp' },
-            { src: '/projects/alphaomega-2.jpg', webp: '/projects/alphaomega-2.webp' },
-            { src: '/projects/alphaomega-3.jpg', webp: '/projects/alphaomega-3.webp' },
+            { src: '/projects/alphaomega-1.jpg', webp: '/projects/alphaomega-1.webp', width: 1100, height: 688 },
+            { src: '/projects/alphaomega-2.jpg', webp: '/projects/alphaomega-2.webp', width: 1100, height: 688 },
+            { src: '/projects/alphaomega-3.jpg', webp: '/projects/alphaomega-3.webp', width: 1100, height: 688 },
           ],
           ready: true,
         },
@@ -293,6 +310,20 @@ export const content = {
   },
 
   fr: {
+    seo: {
+      title: 'Dawensky Thermildort — Analyste risque & data',
+      description:
+        'Analyste risque & data chez Digicel Group. Revenue assurance, investigation de fraude, tableaux de bord Power BI et automatisation SQL — et création de sites web.',
+      ogTitle: 'Dawensky Thermildort — Analyste risque & data',
+      ogDescription:
+        'Transformer les données et le risque en décisions claires — revenue assurance, investigation de fraude, tableaux de bord BI et développement web.',
+      ogImageAlt: 'Dawensky Thermildort, analyste risque & data',
+      jobTitle: 'Analyste risque & data',
+      author: 'Dawensky Thermildort',
+      // Prolonge le <h1> visible ("Bonjour") pour les moteurs et lecteurs d'écran.
+      h1: 'Dawensky Thermildort, analyste risque & data',
+    },
+
     nav: {
       links: [
         { id: 'about', label: 'À propos' },
@@ -304,6 +335,8 @@ export const content = {
       menuOpen: 'Ouvrir le menu',
       menuClose: 'Fermer le menu',
       langSwitch: 'Passer en anglais',
+      langLabel: 'Langue',
+      skip: 'Aller au contenu',
     },
 
     hero: {
@@ -348,9 +381,9 @@ export const content = {
       ],
       languagesLabel: 'Langues',
       languages: [
-        { name: 'Français', level: 'Natif' },
-        { name: 'Créole haïtien', level: 'Natif' },
-        { name: 'Anglais', level: 'Professionnel' },
+        { name: 'Français', level: 'Natif', code: 'fr' },
+        { name: 'Créole haïtien', level: 'Natif', code: 'ht' },
+        { name: 'Anglais', level: 'Professionnel', code: 'en' },
       ],
       cvCta: 'Télécharger mon CV',
       photoAlt: 'Dawensky Thermildort',
@@ -510,6 +543,7 @@ export const content = {
       viewLabel: 'Voir le projet',
       closeLabel: 'Fermer',
       soonGallery: 'Captures bientôt disponibles.',
+      screenshot: 'capture',
       groups: { web: 'Web', data: 'Data & Analytique' },
       items: [
         {
@@ -518,7 +552,7 @@ export const content = {
           tag: 'Application web',
           title: 'Herecheck — Gestion universitaire',
           desc: 'Une plateforme de gestion académique et de présences pour une université haïtienne — suivi des présences et du taux d’assiduité des étudiants, et gestion des étudiants, professeurs, cours, notes et rapports.',
-          images: [{ src: '/projects/herecheck-1.jpg', webp: '/projects/herecheck-1.webp' }],
+          images: [{ src: '/projects/herecheck-1.jpg', webp: '/projects/herecheck-1.webp', width: 1200, height: 676 }],
           ready: true,
         },
         {
@@ -529,9 +563,9 @@ export const content = {
           desc: 'Une boutique e-commerce audacieuse pour un collectif de mode premium — catalogue, fiches produits et commande directe via WhatsApp, avec un design moderne orienté conversion.',
           url: 'https://alphaomegashopllc.com/',
           images: [
-            { src: '/projects/alphaomega-1.jpg', webp: '/projects/alphaomega-1.webp' },
-            { src: '/projects/alphaomega-2.jpg', webp: '/projects/alphaomega-2.webp' },
-            { src: '/projects/alphaomega-3.jpg', webp: '/projects/alphaomega-3.webp' },
+            { src: '/projects/alphaomega-1.jpg', webp: '/projects/alphaomega-1.webp', width: 1100, height: 688 },
+            { src: '/projects/alphaomega-2.jpg', webp: '/projects/alphaomega-2.webp', width: 1100, height: 688 },
+            { src: '/projects/alphaomega-3.jpg', webp: '/projects/alphaomega-3.webp', width: 1100, height: 688 },
           ],
           ready: true,
         },

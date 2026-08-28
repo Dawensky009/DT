@@ -4,7 +4,7 @@ import { profile } from '../i18n/content.js'
 import Reveal from './Reveal.jsx'
 
 export default function Footer() {
-  const { t, lang, toggle } = useLang()
+  const { t, setLang, hrefFor, other } = useLang()
   const year = new Date().getFullYear()
 
   const mailto = `mailto:${profile.email}`
@@ -90,13 +90,19 @@ export default function Footer() {
                 {s.label}
               </a>
             ))}
-            <button
-              type="button"
-              onClick={toggle}
+            {/* vrai lien : les robots doivent pouvoir passer d'une langue à l'autre */}
+            <a
+              href={hrefFor(other[0])}
+              hrefLang={other[0]}
+              onClick={(e) => {
+                e.preventDefault()
+                setLang(other[0])
+              }}
+              aria-label={t.nav.langSwitch}
               className="cursor-pointer text-white/60 transition-colors hover:text-paper"
             >
-              {lang === 'en' ? 'FR' : 'EN'}
-            </button>
+              {other[0].toUpperCase()}
+            </a>
             <a href="#top" className="flex items-center gap-1.5 text-white/60 transition-colors hover:text-paper">
               {t.footer.backToTop}
               <ArrowUp size={14} />
